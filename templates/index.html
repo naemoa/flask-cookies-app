@@ -14,7 +14,8 @@
             <button type="submit">Preview Website</button>
         </form>
         <button onclick="togglePopup()">Open Popup</button>
-        <button onclick="toggleAnotherPopup()">Open Another Popup</button>
+        <button onclick="togglePopup1()">Open Another Popup</button>
+        <button onclick="togglePopup2()">Open Popup 2</button>
         <iframe src="/popup" id="iframe" frameborder="0" onload="iframeLoaded()"></iframe>
     </div>
     <script>
@@ -27,12 +28,15 @@
 
         function togglePopup() {
             var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
-            var anotherPopup = document.getElementById("iframe").contentWindow.document.getElementById("another-popup-widget");
+            var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+            var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
             if (popup) {
                 if (popup.style.display === "none") {
                     popup.style.display = "block";
-                    if (anotherPopup) {
-                        anotherPopup.style.display = "none";
+                    popup1.style.display = "none";
+                    popup2.style.display = "none";
+                    if (popup1) {
+                        popup1.style.display = "none";
                     }
                 } else {
                     popup.style.display = "none";
@@ -40,31 +44,52 @@
             }
         }
 
-        function toggleAnotherPopup() {
+        function togglePopup1() {
             var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
-            var anotherPopup = document.getElementById("iframe").contentWindow.document.getElementById("another-popup-widget");
-            if (anotherPopup) {
-                if (anotherPopup.style.display === "none") {
-                    anotherPopup.style.display = "block";
+            var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+            var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+            if (popup1) {
+                if (popup1.style.display === "none") {
+                    popup.style.display = "none";
+                    popup1.style.display = "block";
+                    popup2.style.display = "none";
                     if (popup) {
                         popup.style.display = "none";
                     }
                 } else {
-                    anotherPopup.style.display = "none";
+                    popup1.style.display = "none";
                 }
             }
         }
 
+        function togglePopup2() {
+            var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
+            var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+            if (popup2) {
+                if (popup2.style.display === "none") {
+                    popup.style.display = "none";
+                    popup1.style.display = "none";
+                    popup2.style.display = "block";
+                    if (popup) {
+                        popup.style.display = "none";
+                    }
+                } else {
+                    popup2.style.display = "none";
+                }
+            }
+        }
         function iframeLoaded() {
             var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
-            var anotherPopup = document.getElementById("iframe").contentWindow.document.getElementById("another-popup-widget");
+            var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+            var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
             if (popup && anotherPopup) {
                 popup.style.display = "block";
-                anotherPopup.style.display = "none";
+                popup1.style.display = "none";
+                popup2.style.display = "none";
             }
         }
 
-                // Submit form when Enter key is pressed
+// Submit form when Enter key is pressed
                 document.getElementById("websiteURL").addEventListener("keydown", function(event) {
             if (event.keyCode === 13) {
                 event.preventDefault();

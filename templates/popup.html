@@ -27,7 +27,7 @@
         
         
     </div>
-    <div class="another-popup-widget" id="another-popup-widget">
+    <div class="popup-widget1" id="popup-widget1">
         <div class="col-lg-4 col-md-4 mt-4 mt-sm-0" >
             <div class="card bg-gradient-dark move-on-hover">
                 <div class="card-body">
@@ -49,8 +49,36 @@
             
         </div>
         
-        <button onclick="parent.parent.toggleAnotherPopup()">Close</button>
+        <button onclick="parent.parent.togglePopup1()">Close</button>
     </div>
+
+    <div class="popup-widget2" id="popup-widget2">
+        <div class="col-lg-4 col-md-4 mt-4 mt-sm-0" >
+            <div class="card bg-gradient-dark move-on-hover">
+                <div class="card-body">
+                    <div class="d-flex">
+                        <h5 class="mb-0 text-white">Cookies</h5>
+                        <div class="ms-auto">
+                            <h1 class="text-white text-end mb-0 mt-n2"><i class="fas fa-check"></i>
+                            </h1>
+                            <p class="text-sm mb-0 text-white">okay</p>
+                        </div>
+                    </div>
+                    <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
+                    
+                </div>
+                <a href="javascript:;" class="w-100 text-center py-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Show More">
+                    <i class="fas fa-chevron-down text-white"></i>
+                </a>
+            </div>
+            
+        </div>
+        
+        <button onclick="parent.parent.togglePopup2()">Close</button>
+    </div>
+
+
+
     <div class="website-content">
         {{ page_content | safe }}
     </div>
