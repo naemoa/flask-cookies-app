@@ -42,13 +42,6 @@
         
         .slide {
         flex: 0 0 33.333%;
-        <!-- 
-            box-sizing: border-box;
-            1background-color: #fff;
-            padding: 40px;
-            text-align: center;
-            font-size: 24px;
-        color: #333;-->
         }
         @media screen and (max-width: 600px) {
         .slide {
@@ -207,7 +200,7 @@
                                                 
                                             </div>
                                                   
-                                              <div class="col-lg-4 col-md-4 mt-4 mt-sm-0 slide" onclick="toggleAnotherPopup()" >
+                                              <div class="col-lg-4 col-md-4 mt-4 mt-sm-0 slide" onclick="togglePopup1()" >
                                                 <div class="card card-background card-background-mask-primary move-on-hover align-items-start">
                                                     <div class="cursor-pointer">
                                                         <div class="full-background" style="background-image: url('{{ url_for('static', filename='img/curved-images/curved1.jpg') }}')"
@@ -227,7 +220,7 @@
                                                 </div>
                                             </div>
                                                 
-                                             <div class="col-lg-4 col-md-4 mt-4 mt-sm-0 slide togglePopup2">
+                                             <div class="col-lg-4 col-md-4 mt-4 mt-sm-0 slide" onclick="togglePopup2()">
                                                 <div class="card card-background shadow-none card-background-mask-secondary" id="sidenavCard">
                                                     <div class="full-background" style="background-image: url('{{ url_for('static', filename='img/curved-images/white-curved.jpg') }}')">
                                                     </div>
@@ -334,7 +327,7 @@
             const leftBtn = document.getElementById('leftBtn');
             const rightBtn = document.getElementById('rightBtn');
             let currentIndex = 0;
-            const slideInterval = 3000; // 3 seconds
+            const slideInterval = 5000; // 5 seconds
             
             // Clone slides for infinite effect
             const firstClone = slider.children[0].cloneNode(true);
@@ -417,59 +410,76 @@
         
         function togglePopup() {
             var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
-            var anotherPopup = document.getElementById("iframe").contentWindow.document.getElementById("another-popup-widget");
+            var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+            var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
             if (popup) {
                 if (popup.style.display === "none") {
                     popup.style.display = "block";
-                    if (anotherPopup) {
-                        anotherPopup.style.display = "none";
+                    popup1.style.display = "none";
+                    popup2.style.display = "none";
+                    if (popup1) {
+                        popup1.style.display = "none";
                     }
-                    } else {
+                } else {
                     popup.style.display = "none";
                 }
             }
         }
-        
-        function toggleAnotherPopup() {
+
+        function togglePopup1() {
             var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
-            var anotherPopup = document.getElementById("iframe").contentWindow.document.getElementById("another-popup-widget");
-            if (anotherPopup) {
-                if (anotherPopup.style.display === "none") {
-                    anotherPopup.style.display = "block";
+            var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+            var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+            if (popup1) {
+                if (popup1.style.display === "none") {
+                    popup.style.display = "none";
+                    popup1.style.display = "block";
+                    popup2.style.display = "none";
                     if (popup) {
                         popup.style.display = "none";
                     }
-                    } else {
-                    anotherPopup.style.display = "none";
+                } else {
+                    popup1.style.display = "none";
                 }
             }
         }
- 
+
         function togglePopup2() {
             var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
-            var anotherPopup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
-            if (anotherPopup) {
-                if (anotherPopup.style.display === "none") {
-                    anotherPopup.style.display = "block";
+            var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+            var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+            if (popup2) {
+                if (popup2.style.display === "none") {
+                    popup.style.display = "none";
+                    popup1.style.display = "none";
+                    popup2.style.display = "block";
                     if (popup) {
                         popup.style.display = "none";
                     }
-                    } else {
-                    anotherPopup.style.display = "none";
+                } else {
+                    popup2.style.display = "none";
                 }
             }
         }
         function iframeLoaded() {
             var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
-            var anotherPopup = document.getElementById("iframe").contentWindow.document.getElementById("another-popup-widget");
-            if (popup && anotherPopup) {
+            var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+            var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+            if (popup && popup2) {
                 popup.style.display = "block";
-                anotherPopup.style.display = "none";
+                popup1.style.display = "none";
+                popup2.style.display = "none";
             }
         }
-        
+
+     
         // Submit form when Enter key is pressed
-        
+        document.getElementById("websiteURL").addEventListener("keydown", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("websiteForm").submit();
+            }
+        });
     </script>
     
     
