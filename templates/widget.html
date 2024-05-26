@@ -20,7 +20,12 @@
     
     <style>
         
-        
+      iframe  .project-slider {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}  
         .col-xl-3 {
         flex: 0 0 auto;
         width: 100%;
@@ -43,7 +48,7 @@
         .slide {
         flex: 0 0 33.333%;
         box-sizing: border-box;
-            padding: 40px;
+            padding: 10px 15px;
             text-align: center;
             font-size: 24px;
         color: #333;
@@ -176,7 +181,7 @@
                                         </div>
                                     </div>-->
                                     
-                                    <div class="col-12 mt-5">
+                                    <div class="col-12 mt-4">
                                         <div class="card mb-1">
                                             <!--<div class="card-header1 pb-0 p-1">
                                                 <h6 class="mb-1">Projects</h6>
@@ -278,8 +283,20 @@
                                                 
                                                 
                                             </div>
-
-                                        </div>
+     
+                    <div class="card-header1 pb-1 mb-1 p-1">
+                    <div class="row">
+                    <div class="col-6 d-flex align-items-center">
+                                                                    <a class="btn bg-gradient-dark mb-0" id="leftBtn" href="javascript:;"><i class="fas fa-backward p-2"></i></a>
+                    </div>
+                    <div class="col-6 text-end">
+                      <a class="btn bg-gradient-dark mb-0" id="rightBtn"  href="javascript:;"><i class="fas fa-forward p-2"></i></a>
+                    </div>
+                  </div>
+                </div> 
+     
+                                            </div>
+                                    
                                     </div>
                                     
                                       <div class="col-12 mt-1">
