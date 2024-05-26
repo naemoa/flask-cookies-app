@@ -20,12 +20,12 @@
     
     <style>
         
-      iframe  .project-slider {
-  display: flex;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
-}  
+        iframe  .project-slider {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        }  
         .col-xl-3 {
         flex: 0 0 auto;
         width: 100%;
@@ -48,9 +48,9 @@
         .slide {
         flex: 0 0 33.333%;
         box-sizing: border-box;
-            padding: 10px 15px;
-            text-align: center;
-            font-size: 24px;
+        padding: 10px 15px;
+        text-align: center;
+        font-size: 24px;
         color: #333;
         }
         @media screen and (max-width: 600px) {
@@ -105,81 +105,6 @@
                                 </div>
                                 
                                 <div class="row pt-1">
-                                    <!--<div class="col-lg-1 col-md-1 pt-5 pt-lg-0 ms-lg-5 text-center">
-                                        <a href="javascript:;" class="avatar avatar-md border-0" data-bs-toggle="tooltip" data-bs-placement="left" title="My Profile">
-                                            <img class="border-radius-lg" alt="Image placeholder" src="{{ url_for('static', filename='img/team-1.jpg') }}">
-                                        </a>
-                                        <button class="btn btn-white border-radius-lg p-2 mt-2" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Home">
-                                            <i class="fas fa-home p-2"></i>
-                                        </button>
-                                        <button class="btn btn-white border-radius-lg p-2" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Search">
-                                            <i class="fas fa-search p-2"></i>
-                                        </button>
-                                        <button class="btn btn-white border-radius-lg p-2" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Minimize">
-                                            <i class="fas fa-ellipsis-h p-2"></i>
-                                        </button>
-                                    </div>
-                                    <div class="col-lg-10 col-md-8">
-                                        
-                                        <div class="row mt-4" >
-                                            <div class="col-lg-4 col-md-4 mt-4 mt-sm-0" onclick="togglePopup()">
-                                                <div class="card bg-gradient-dark move-on-hover">
-                                                    <div class="card-body">
-                                                        <div class="d-flex">
-                                                            <h5 class="mb-0 text-white">Cookies</h5>
-                                                            <div class="ms-auto">
-                                                                <h1 class="text-white text-end mb-0 mt-n2"><i class="fas fa-check"></i>
-                                                                </h1>
-                                                                <p class="text-sm mb-0 text-white">okay</p>
-                                                            </div>
-                                                        </div>
-                                                        <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
-                                                        
-                                                    </div>
-                                                    <a href="javascript:;" class="w-100 text-center py-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Show More">
-                                                        <i class="fas fa-chevron-down text-white"></i>
-                                                    </a>
-                                                </div>
-                                                
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 mt-4 mt-sm-0" onclick="toggleAnotherPopup()" >
-                                                <div class="card card-background card-background-mask-primary move-on-hover align-items-start">
-                                                    <div class="cursor-pointer">
-                                                        <div class="full-background" style="background-image: url('{{ url_for('static', filename='img/curved-images/curved1.jpg') }}')"
-                                                        ></div>
-                                                        <div class="card-body">
-                                                            <h5 class="text-white mb-0">We use cookies to offer the best experience to you</h5>
-                                                            <p class="text-white text-sm"></p>
-                                                            <div class="d-flex mt-5">
-                                                                
-                                                                <button class="btn btn-outline-white rounded-circle p-2 mx-2 mb-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="okay">
-                                                                    <i class="fas fa-check p-2"></i>
-                                                                </button>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col-lg-4 col-md-4 mt-4 mt-sm-0 togglePopup2()">
-                                                <div class="card card-background shadow-none card-background-mask-secondary" id="sidenavCard">
-                                                    <div class="full-background" style="background-image: url('{{ url_for('static', filename='img/curved-images/white-curved.jpg') }}')">
-                                                    </div>
-                                                    <div class="card-body text-start p-3 w-100">
-                                                        <div class="icon icon-shape icon-sm bg-white shadow text-center mb-3 d-flex align-items-center justify-content-center border-radius-md">
-                                                            <i class="ni ni-diamond text-dark text-gradient text-lg top-0" aria-hidden="true" id="sidenavCardIcon"></i>
-                                                        </div>
-                                                        <div class="docs-info">
-                                                            <h6 class="text-white up mb-0">Accept?</h6>
-                                                            <p class="text-xs font-weight-bold">We use cookies to offer the best experience to you</p>
-                                                            <a href="" target="_blank" class="btn btn-white btn-sm w-100 mb-0">Okay</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
                                     
                                     <div class="col-12 mt-4">
                                         <div class="card mb-1">
@@ -188,131 +113,94 @@
                                                 <p class="text-sm">Architects design houses</p>
                                             </div>-->
                                             <div class="card-body p-2 slider-container">
-                                        <div class=" row1 slider">
-                                            <div class="col-lg-4 col-md-4 mt-4 mt-sm-0 slide" onclick="togglePopup()">
-                                                <div class="card bg-gradient-dark move-on-hover">
-                                                    <div class="card-body">
-                                                        <div class="d-flex">
-                                                            <h5 class="mb-0 text-white">Cookies</h5>
-                                                            <div class="ms-auto">
-                                                                <h1 class="text-white text-end mb-0 mt-n2"><i class="fas fa-check"></i>
-                                                                </h1>
-                                                                <p class="text-sm mb-0 text-white">okay</p>
-                                                            </div>
-                                                        </div>
-                                                        <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
-                                                        
-                                                    </div>
-                                                    <a href="javascript:;" class="w-100 text-center py-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Show More">
-                                                        <i class="fas fa-chevron-down text-white"></i>
-                                                    </a>
-                                                </div>
-                                                
-                                            </div>
-                                                  
-                                              <div class="col-lg-4 col-md-4 mt-4 mt-sm-0 slide" onclick="togglePopup1()" >
-                                                <div class="card card-background card-background-mask-primary move-on-hover align-items-start">
-                                                    <div class="cursor-pointer">
-                                                        <div class="full-background" style="background-image: url('{{ url_for('static', filename='img/curved-images/curved1.jpg') }}')"
-                                                        ></div>
-                                                        <div class="card-body">
-                                                            <h5 class="text-white mb-0">We use cookies to offer the best experience to you</h5>
-                                                        
-                                                            <div class="d-flex mt-51">
-                                                            <div class="d-flex align-items-center justify-content-between">
-                                                                    <button type="button" class="btn btn-outline-primary btn-sm btn-white mb-0">Accept</button>
-                                                               </div>
-                                                
+                                                <div class=" row1 slider">
+                                                    <div class="col-lg-4 col-md-4 mt-4 mt-sm-0 slide" onclick="togglePopup()">
+                                                        <div class="card bg-gradient-dark move-on-hover">
+                                                            <div class="card-body">
+                                                                <div class="d-flex">
+                                                                    <h5 class="mb-0 text-white">Cookies</h5>
+                                                                    <div class="ms-auto">
+                                                                        <h1 class="text-white text-end mb-0 mt-n2"><i class="fas fa-check"></i>
+                                                                        </h1>
+                                                                        <p class="text-sm mb-0 text-white">okay</p>
+                                                                    </div>
+                                                                </div>
+                                                                <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
                                                                 
                                                             </div>
+                                                            <a href="javascript:;" class="w-100 text-center py-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Show More">
+                                                                <i class="fas fa-chevron-down text-white"></i>
+                                                            </a>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                                
-                                             <div class="col-lg-4 col-md-4 mt-4 mt-sm-0 slide" onclick="togglePopup2()">
-                                                <div class="card card-background shadow-none card-background-mask-secondary" id="sidenavCard">
-                                                    <div class="full-background" style="background-image: url('{{ url_for('static', filename='img/curved-images/white-curved.jpg') }}')">
-                                                    </div>
-                                                    <div class="card-body text-start p-3 w-100">
-                                                        <div class="icon icon-shape icon-sm bg-white shadow text-center mb-3 d-flex align-items-center justify-content-center border-radius-md">
-                                                            <i class="ni ni-diamond text-dark text-gradient text-lg top-0" aria-hidden="true" id="sidenavCardIcon"></i>
-                                                        </div>
-                                                        <div class="docs-info">
-                                                            <h6 class="text-white up mb-0">Accept?</h6>
-                                                            <p class="text-xs font-weight-bold">We use cookies to offer the best experience to you</p>
-                                                            <a href="" target="_blank" class="btn btn-white btn-sm w-1001 mb-0">Okay</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>                                               
-  <!--                                                  <div class="col-xl-3 col-md-6 mb-xl-0 mb-41 slide">
-                                                        <div class="card card-blog card-plain">
-                                                            <div class="position-relative">
-                                                                <a class="d-block shadow-xl border-radius-xl">
-                                                                    <img src="../assets/img/home-decor-1.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
-                                                                </a>
-                                                            </div>
-                                                            <div class="card-body px-1 pb-0">
-                                                                <p class="text-gradient text-dark mb-2 text-sm">Project #2</p>
-                                                                <a href="javascript:;">
-                                                                    <h5>
-                                                                        Modern
-                                                                    </h5>
-                                                                </a>
-                                                               
-                                                                <div class="d-flex align-items-center justify-content-between">
-                                                                    <button type="button" class="btn btn-outline-primary btn-sm mb-0">View Project</button>
-                                                               </div>
+                                                    
+                                                    <div class="col-lg-4 col-md-4 mt-4 mt-sm-0 slide" onclick="togglePopup1()" >
+                                                        <div class="card card-background card-background-mask-primary move-on-hover align-items-start">
+                                                            <div class="cursor-pointer">
+                                                                <div class="full-background" style="background-image: url('{{ url_for('static', filename='img/curved-images/curved1.jpg') }}')"
+                                                                ></div>
+                                                                <div class="card-body">
+                                                                    <h5 class="text-white mb-0">We use cookies to offer the best experience to you</h5>
+                                                                    
+                                                                    <div class="d-flex mt-51">
+                                                                        <div class="d-flex align-items-center justify-content-between">
+                                                                            <button type="button" class="btn btn-outline-primary btn-sm btn-white mb-0">Accept</button>
+                                                                        </div>
+                                                                        
+                                                                        
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                   
-                                                    <div class="col-xl-3 col-md-6 mb-xl-0 mb-4 slide">
-                                                        <div class="card h-100 card-plain border">
-                                                            <div class="card-body d-flex flex-column justify-content-center text-center">
-                                                                <a href="javascript:;">
-                                                                    <i class="fa fa-plus text-secondary mb-3"></i>
-                                                                    <h5 class=" text-secondary"> New project </h5>
-                                                                </a>
+                                                    
+                                                    <div class="col-lg-4 col-md-4 mt-4 mt-sm-0 slide" onclick="togglePopup2()">
+                                                        <div class="card card-background shadow-none card-background-mask-secondary" id="sidenavCard">
+                                                            <div class="full-background" style="background-image: url('{{ url_for('static', filename='img/curved-images/white-curved.jpg') }}')">
+                                                            </div>
+                                                            <div class="card-body text-start p-3 w-100">
+                                                                <div class="icon icon-shape icon-sm bg-white shadow text-center mb-3 d-flex align-items-center justify-content-center border-radius-md">
+                                                                    <i class="ni ni-diamond text-dark text-gradient text-lg top-0" aria-hidden="true" id="sidenavCardIcon"></i>
+                                                                </div>
+                                                                <div class="docs-info">
+                                                                    <h6 class="text-white up mb-0">Accept?</h6>
+                                                                    <p class="text-xs font-weight-bold">We use cookies to offer the best experience to you</p>
+                                                                    <a href="" target="_blank" class="btn btn-white btn-sm w-1001 mb-0">Okay</a>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>-->
-                                                
+                                                    </div>                                </div>
+                                            </div>
+                                            
+                                            <div class="card-header1 pb-1 mb-1 p-1">
+                                                <div class="row">
+                                                    <div class="col-6 d-flex align-items-center">
+                                                        <a class="btn bg-gradient-dark mb-0" id="leftBtn" href="javascript:;"><i class="fas fa-backward p-2"></i></a>
+                                                    </div>
+                                                    <div class="col-6 text-end">
+                                                        <a class="btn bg-gradient-dark mb-0" id="rightBtn"  href="javascript:;"><i class="fas fa-forward p-2"></i></a>
+                                                    </div>
                                                 </div>
-                                                
-                                                
-                                            </div>
-     
-                    <div class="card-header1 pb-1 mb-1 p-1">
-                    <div class="row">
-                    <div class="col-6 d-flex align-items-center">
-                                                                    <a class="btn bg-gradient-dark mb-0" id="leftBtn" href="javascript:;"><i class="fas fa-backward p-2"></i></a>
-                    </div>
-                    <div class="col-6 text-end">
-                      <a class="btn bg-gradient-dark mb-0" id="rightBtn"  href="javascript:;"><i class="fas fa-forward p-2"></i></a>
-                    </div>
-                  </div>
-                </div> 
-     
-                                            </div>
-                                    
+                                            </div> 
+                                            
+                                        </div>
+                                        
                                     </div>
                                     
-                                      <div class="col-12 mt-1">
+                                    <div class="col-12 mt-1">
                                         <div class="card mb-1">
                                             <!--<div class="card-header1 pb-0 p-1">
                                                 <h6 class="mb-1">Projects</h6>
                                                 <p class="text-sm">Architects design houses</p>
                                             </div>-->
- 
+                                            
                                             <div class="card card-body1 card-header1 p-2">
                                                 <div class="row project-slider">
                                                     <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
                                                         <div class="card card-blog card-plain">
                                                             <div class="position-relative">
                                                                 <a href="#" class="d-block shadow-xl border-radius-xl">
-                                                                    <iframe style="min-height: 300px;" class="img-fluid shadow border-radius-xl" src="/popup" id="iframe" frameborder="0" onload="iframeLoaded()"></iframe> 
+                                                                    <iframe style="height: 400px;" class="img-fluid shadow border-radius-xl" src="/popup" id="iframe" frameborder="0" onload="iframeLoaded()"></iframe> 
                                                                 </a>
                                                             </div>
                                                         </div>
@@ -322,15 +210,15 @@
                                                     
                                                 </div>
                                             </div>
-                                </div>
+                                        </div>
                                     </div>                                  
-                                      <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
+                                    <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
                                         <div class="card card-plain mt-0">   <div class="card-body">       <div class="text-center">
                                             <button type="button" class="btn bg-gradient-success w-100 mt-4 mb-0">SAVE</button>
                                         </div>
+                                        </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
                                 </div>
                                 
                                 
@@ -437,6 +325,104 @@
             var iframe = document.getElementById("iframe");
             iframe.src = "/popup?websiteURL=" + websiteURL;
         }
+        function injectStylesIntoIframe(iframe) {
+        const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+        const styleElement = iframeDocument.createElement('style');
+        styleElement.textContent = `
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            .popup {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .popup-widget {
+            }
+            .card .card-body {
+                font-family: "Open Sans";
+                padding: 1.5rem;
+                font-size: 24px;
+            }
+            .card {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                min-width: 0;
+                word-wrap: break-word;
+                background-color: #fff;
+                background-clip: border-box;
+                border: 0 solid rgba(0, 0, 0, 0.125);
+                border-radius: 1rem;
+                background-image: linear-gradient(310deg, #141727 0%, #3A416F 100%);
+            }
+            .card-body {
+                flex: 1 1 auto;
+                padding: 1rem 1rem;
+            }
+
+            .d-flex {
+                display: flex !important;
+            }
+            .text-white {
+                color: #fff !important;
+            }
+            .mb-1 {
+                margin-bottom: 0.25rem !important;
+            }
+            .p-2 {
+                padding: 0.5rem !important;
+            }
+            .mt-4 {
+                margin-top: 1.5rem !important;
+            }
+            .bg-gradient-dark {
+                background-image: linear-gradient(310deg, #141727 0%, #3A416F 100%);
+            }
+            .ms-auto {
+                margin-left: auto !important;
+            }
+            .mt-n2 {
+                margin-top: -0.5rem !important;
+            }
+            .text-end {
+                text-align: right !important;
+            }
+            .text-sm {
+                line-height: 1.5;
+            }
+            .mb-0 {
+                margin-bottom: 0 !important;
+            }
+
+            .close {
+                position: absolute;
+                top: 10px;
+                right: 25px;
+                color: #fff;
+                font-size: 30px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        `;
+        iframeDocument.head.appendChild(styleElement);
+    }
         
         function togglePopup() {
             var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
@@ -447,15 +433,16 @@
                     popup.style.display = "block";
                     popup1.style.display = "none";
                     popup2.style.display = "none";
+                     injectStylesIntoIframe(iframe);
                     if (popup1) {
                         popup1.style.display = "none";
                     }
-                } else {
+                    } else {
                     popup.style.display = "none";
                 }
             }
         }
-
+        
         function togglePopup1() {
             var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
             var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
@@ -465,15 +452,16 @@
                     popup.style.display = "none";
                     popup1.style.display = "block";
                     popup2.style.display = "none";
+                    injectStylesIntoIframe(iframe);
                     if (popup) {
                         popup.style.display = "none";
                     }
-                } else {
+                    } else {
                     popup1.style.display = "none";
                 }
             }
         }
-
+        
         function togglePopup2() {
             var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
             var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
@@ -483,10 +471,11 @@
                     popup.style.display = "none";
                     popup1.style.display = "none";
                     popup2.style.display = "block";
+                    injectStylesIntoIframe(iframe);
                     if (popup) {
                         popup.style.display = "none";
                     }
-                } else {
+                    } else {
                     popup2.style.display = "none";
                 }
             }
@@ -499,10 +488,13 @@
                 popup.style.display = "block";
                 popup1.style.display = "none";
                 popup2.style.display = "none";
+                injectStylesIntoIframe(iframe);
             }
         }
-
-     
+        
+      
+        
+        
         // Submit form when Enter key is pressed
         document.getElementById("websiteURL").addEventListener("keydown", function(event) {
             if (event.keyCode === 13) {
@@ -510,6 +502,8 @@
                 document.getElementById("websiteForm").submit();
             }
         });
+        
+
     </script>
     
     
