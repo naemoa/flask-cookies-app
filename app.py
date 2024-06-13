@@ -12,7 +12,7 @@ def popup():
         except requests.exceptions.RequestException as e:
             page_content = f"<h1>Error: {e}</h1>"
     else:
-        page_content = '<h1>No website preview available.</h1>'
+        page_content = '<h3>No website preview available.</h3>'
     return render_template('popup.html', page_content=page_content, website_url=website_url)
 
 
@@ -39,6 +39,10 @@ def rtl():
 @app.route('/profile')
 def profile():
     return render_template('profile.html', title='Profile')
+
+@app.route('/editor')
+def editor():
+    return render_template('editor.html', title='Editor')
 
 @app.route('/sign-in')
 def sign_in():
