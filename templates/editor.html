@@ -66,11 +66,12 @@
         {% include 'sidebar.html' %}
         <!-- End aside -->
         
-        <div class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
+        <div class="main-content position-relative bg-gray-100 max-height-vh-1001 h-1001">
            <!-- Navbar -->
             {% include 'navbar.html' %}
             <!-- End Navbar -->
-
+    <div class="border-radius-xl mt-3 mx-3 position-relative" style="background-image: url('{{ url_for('static', filename='img/vr-bg.jpg') }}'); background-size: cover;">
+    
     <div class="container-fluid py-4">
       <div class="row">
         <div class="col-lg-8 col-md-10 col-sm-12">
@@ -496,6 +497,8 @@
                                 </div>
 
     </div>
+ 
+ </div>
   </div>
             <!-- Footer -->
             {% include 'footer.html'%}
@@ -599,14 +602,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!/^https?:\/\//i.test(domain)) {
                 websiteURL = "https://" + domain;
             }
-        var iframe = document.getElementById("iframe");
-        iframe.src = "/popup?websiteURL=" + websiteURL;
+        var iframe1 = document.getElementById("iframe");
+        iframe1.src = "/popup?websiteURL=" + websiteURL;
+        
         
     }
 
- 
-    function togglePopup() {
-    var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
+  var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
     var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
     var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
     var popup3 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget3");
@@ -625,7 +627,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var popup16 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget16");
     
                 
-
+    function togglePopup() {
         if (popup) {
             if (popup.style.display === "none") {
                 popup.style.display = "block";
@@ -653,23 +655,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function togglePopup1() {
-var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
-    var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
-    var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
-    var popup3 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget3");
-    var popup4 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget4");
-    var popup5 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget5");
-    var popup6 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget6");
-    var popup7 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget7");
-    var popup8 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget8");
-    var popup9 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget9");
-    var popup10 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget10");
-    var popup11 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget11");
-    var popup12 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget12");
-    var popup13 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget13");
-    var popup14 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget14");
-    var popup15 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget15");
-    var popup16 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget16");
         if (popup1) {
             if (popup1.style.display === "none") {
                 popup.style.display = "none";
@@ -1143,7 +1128,7 @@ var popup = document.getElementById("iframe").contentWindow.document.getElementB
             popup14.style.display = "none";
             popup15.style.display = "none";
             popup16.style.display = "none";
-            //injectStylesIntoIframe();
+            injectStylesIntoIframe();
         }
  
        if (popup1) {
@@ -1193,7 +1178,7 @@ var popup = document.getElementById("iframe").contentWindow.document.getElementB
         function injectStylesIntoIframe() {
             const iframe = document.getElementById("iframe");
             const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-            const cssFilePath = '{{ url_for("static", filename="style.css") }}'; // Predefined CSS file path
+            const cssFilePath = '{{ url_for("static", filename="css/soft-ui-dashboard.css") }}'; // Predefined CSS file path
             
             // Create a link element for the external CSS file
             const linkElement = iframeDocument.createElement('link');
@@ -1202,6 +1187,8 @@ var popup = document.getElementById("iframe").contentWindow.document.getElementB
             
             // Append the link element to the iframe's head
             iframeDocument.head.appendChild(linkElement);
+            
+            
         }
 
 </script>
