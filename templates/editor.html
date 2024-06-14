@@ -602,13 +602,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!/^https?:\/\//i.test(domain)) {
                 websiteURL = "https://" + domain;
             }
-        var iframe1 = document.getElementById("iframe");
-        iframe1.src = "/popup?websiteURL=" + websiteURL;
-        
+        var iframe = document.getElementById("iframe");
+        iframe.src = "/popup?websiteURL=" + websiteURL;
         
     }
 
-  var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
+ 
+    
+                
+    function togglePopup() {
+     var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
     var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
     var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
     var popup3 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget3");
@@ -625,9 +628,6 @@ document.addEventListener('DOMContentLoaded', () => {
     var popup14 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget14");
     var popup15 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget15");
     var popup16 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget16");
-    
-                
-    function togglePopup() {
         if (popup) {
             if (popup.style.display === "none") {
                 popup.style.display = "block";
@@ -655,7 +655,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function togglePopup1() {
-        if (popup1) {
+    var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
+    var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+    var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+    var popup3 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget3");
+    var popup4 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget4");
+    var popup5 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget5");
+    var popup6 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget6");
+    var popup7 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget7");
+    var popup8 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget8");
+    var popup9 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget9");
+    var popup10 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget10");
+    var popup11 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget11");
+    var popup12 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget12");
+    var popup13 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget13");
+    var popup14 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget14");
+    var popup15 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget15");
+    var popup16 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget16");
+    if (popup1) {
             if (popup1.style.display === "none") {
                 popup.style.display = "none";
                 popup1.style.display = "block";
@@ -682,6 +699,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     function togglePopup2() {
+        var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
+    var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+    var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+    var popup3 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget3");
+    var popup4 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget4");
+    var popup5 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget5");
+    var popup6 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget6");
+    var popup7 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget7");
+    var popup8 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget8");
+    var popup9 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget9");
+    var popup10 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget10");
+    var popup11 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget11");
+    var popup12 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget12");
+    var popup13 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget13");
+    var popup14 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget14");
+    var popup15 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget15");
+    var popup16 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget16");
         if (popup2) {
             if (popup2.style.display === "none") {
                 popup.style.display = "none";
@@ -709,6 +743,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }  
  
     function togglePopup3() {
+        var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
+    var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+    var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+    var popup3 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget3");
+    var popup4 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget4");
+    var popup5 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget5");
+    var popup6 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget6");
+    var popup7 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget7");
+    var popup8 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget8");
+    var popup9 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget9");
+    var popup10 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget10");
+    var popup11 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget11");
+    var popup12 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget12");
+    var popup13 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget13");
+    var popup14 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget14");
+    var popup15 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget15");
+    var popup16 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget16");
         if (popup3) {
             if (popup3.style.display === "none") {
                 popup.style.display = "none";
@@ -736,6 +787,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
  
     function togglePopup4() {
+        var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
+    var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+    var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+    var popup3 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget3");
+    var popup4 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget4");
+    var popup5 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget5");
+    var popup6 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget6");
+    var popup7 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget7");
+    var popup8 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget8");
+    var popup9 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget9");
+    var popup10 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget10");
+    var popup11 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget11");
+    var popup12 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget12");
+    var popup13 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget13");
+    var popup14 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget14");
+    var popup15 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget15");
+    var popup16 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget16");
         if (popup4) {
             if (popup4.style.display === "none") {
                 popup.style.display = "none";
@@ -763,6 +831,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
  
     function togglePopup5() {
+        var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
+    var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+    var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+    var popup3 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget3");
+    var popup4 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget4");
+    var popup5 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget5");
+    var popup6 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget6");
+    var popup7 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget7");
+    var popup8 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget8");
+    var popup9 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget9");
+    var popup10 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget10");
+    var popup11 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget11");
+    var popup12 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget12");
+    var popup13 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget13");
+    var popup14 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget14");
+    var popup15 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget15");
+    var popup16 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget16");
         if (popup5) {
             if (popup5.style.display === "none") {
                 popup.style.display = "none";
@@ -790,6 +875,23 @@ document.addEventListener('DOMContentLoaded', () => {
     } 
  
     function togglePopup6() {
+        var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
+    var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+    var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+    var popup3 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget3");
+    var popup4 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget4");
+    var popup5 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget5");
+    var popup6 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget6");
+    var popup7 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget7");
+    var popup8 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget8");
+    var popup9 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget9");
+    var popup10 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget10");
+    var popup11 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget11");
+    var popup12 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget12");
+    var popup13 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget13");
+    var popup14 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget14");
+    var popup15 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget15");
+    var popup16 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget16");
         if (popup6) {
             if (popup6.style.display === "none") {
                 popup.style.display = "none";
@@ -817,6 +919,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
  
     function togglePopup7() {
+        var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
+    var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+    var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+    var popup3 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget3");
+    var popup4 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget4");
+    var popup5 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget5");
+    var popup6 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget6");
+    var popup7 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget7");
+    var popup8 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget8");
+    var popup9 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget9");
+    var popup10 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget10");
+    var popup11 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget11");
+    var popup12 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget12");
+    var popup13 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget13");
+    var popup14 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget14");
+    var popup15 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget15");
+    var popup16 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget16");
         if (popup7) {
             if (popup7.style.display === "none") {
                 popup.style.display = "none";
@@ -844,6 +963,23 @@ document.addEventListener('DOMContentLoaded', () => {
     } 
  
     function togglePopup8() {
+        var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
+    var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+    var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+    var popup3 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget3");
+    var popup4 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget4");
+    var popup5 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget5");
+    var popup6 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget6");
+    var popup7 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget7");
+    var popup8 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget8");
+    var popup9 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget9");
+    var popup10 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget10");
+    var popup11 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget11");
+    var popup12 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget12");
+    var popup13 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget13");
+    var popup14 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget14");
+    var popup15 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget15");
+    var popup16 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget16");
         if (popup8) {
             if (popup8.style.display === "none") {
                 popup.style.display = "none";
@@ -871,6 +1007,23 @@ document.addEventListener('DOMContentLoaded', () => {
     } 
 
     function togglePopup9() {
+        var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
+    var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+    var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+    var popup3 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget3");
+    var popup4 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget4");
+    var popup5 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget5");
+    var popup6 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget6");
+    var popup7 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget7");
+    var popup8 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget8");
+    var popup9 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget9");
+    var popup10 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget10");
+    var popup11 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget11");
+    var popup12 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget12");
+    var popup13 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget13");
+    var popup14 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget14");
+    var popup15 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget15");
+    var popup16 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget16");
         if (popup9) {
             if (popup9.style.display === "none") {
                 popup.style.display = "none";
@@ -898,6 +1051,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
  
     function togglePopup10() {
+        var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
+    var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+    var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+    var popup3 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget3");
+    var popup4 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget4");
+    var popup5 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget5");
+    var popup6 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget6");
+    var popup7 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget7");
+    var popup8 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget8");
+    var popup9 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget9");
+    var popup10 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget10");
+    var popup11 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget11");
+    var popup12 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget12");
+    var popup13 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget13");
+    var popup14 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget14");
+    var popup15 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget15");
+    var popup16 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget16");
         if (popup10) {
             if (popup10.style.display === "none") {
                 popup.style.display = "none";
@@ -925,6 +1095,23 @@ document.addEventListener('DOMContentLoaded', () => {
     } 
  
     function togglePopup11() {
+        var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
+    var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+    var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+    var popup3 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget3");
+    var popup4 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget4");
+    var popup5 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget5");
+    var popup6 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget6");
+    var popup7 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget7");
+    var popup8 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget8");
+    var popup9 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget9");
+    var popup10 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget10");
+    var popup11 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget11");
+    var popup12 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget12");
+    var popup13 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget13");
+    var popup14 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget14");
+    var popup15 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget15");
+    var popup16 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget16");
         if (popup11) {
             if (popup11.style.display === "none") {
                 popup.style.display = "none";
@@ -952,6 +1139,23 @@ document.addEventListener('DOMContentLoaded', () => {
     } 
  
     function togglePopup12() {
+        var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
+    var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+    var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+    var popup3 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget3");
+    var popup4 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget4");
+    var popup5 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget5");
+    var popup6 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget6");
+    var popup7 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget7");
+    var popup8 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget8");
+    var popup9 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget9");
+    var popup10 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget10");
+    var popup11 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget11");
+    var popup12 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget12");
+    var popup13 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget13");
+    var popup14 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget14");
+    var popup15 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget15");
+    var popup16 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget16");
         if (popup12) {
             if (popup12.style.display === "none") {
                 popup.style.display = "none";
@@ -979,6 +1183,23 @@ document.addEventListener('DOMContentLoaded', () => {
     } 
  
     function togglePopup13() {
+        var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
+    var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+    var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+    var popup3 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget3");
+    var popup4 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget4");
+    var popup5 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget5");
+    var popup6 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget6");
+    var popup7 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget7");
+    var popup8 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget8");
+    var popup9 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget9");
+    var popup10 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget10");
+    var popup11 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget11");
+    var popup12 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget12");
+    var popup13 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget13");
+    var popup14 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget14");
+    var popup15 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget15");
+    var popup16 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget16");
         if (popup13) {
             if (popup13.style.display === "none") {
                 popup.style.display = "none";
@@ -1006,6 +1227,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function togglePopup14() {
+        var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
+    var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+    var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+    var popup3 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget3");
+    var popup4 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget4");
+    var popup5 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget5");
+    var popup6 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget6");
+    var popup7 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget7");
+    var popup8 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget8");
+    var popup9 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget9");
+    var popup10 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget10");
+    var popup11 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget11");
+    var popup12 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget12");
+    var popup13 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget13");
+    var popup14 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget14");
+    var popup15 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget15");
+    var popup16 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget16");
         if (popup14) {
             if (popup14.style.display === "none") {
                 popup.style.display = "none";
@@ -1033,6 +1271,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function togglePopup15() {
+        var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
+    var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+    var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+    var popup3 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget3");
+    var popup4 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget4");
+    var popup5 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget5");
+    var popup6 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget6");
+    var popup7 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget7");
+    var popup8 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget8");
+    var popup9 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget9");
+    var popup10 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget10");
+    var popup11 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget11");
+    var popup12 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget12");
+    var popup13 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget13");
+    var popup14 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget14");
+    var popup15 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget15");
+    var popup16 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget16");
         if (popup15) {
             if (popup15.style.display === "none") {
                 popup.style.display = "none";
@@ -1060,6 +1315,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function togglePopup16() {
+        var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
+    var popup1 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget1");
+    var popup2 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget2");
+    var popup3 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget3");
+    var popup4 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget4");
+    var popup5 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget5");
+    var popup6 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget6");
+    var popup7 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget7");
+    var popup8 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget8");
+    var popup9 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget9");
+    var popup10 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget10");
+    var popup11 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget11");
+    var popup12 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget12");
+    var popup13 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget13");
+    var popup14 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget14");
+    var popup15 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget15");
+    var popup16 = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget16");
         if (popup16) {
             if (popup16.style.display === "none") {
                 popup.style.display = "none";
@@ -1090,6 +1362,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function iframeLoaded() {
     injectStylesIntoIframe(); // Call the function without parameters
+    injectStylesAndPopupsIntoIframe();
 
     var iframeDocument = document.getElementById("iframe").contentDocument || document.getElementById("iframe").contentWindow.document;
         var popup = document.getElementById("iframe").contentWindow.document.getElementById("popup-widget");
@@ -1128,7 +1401,7 @@ document.addEventListener('DOMContentLoaded', () => {
             popup14.style.display = "none";
             popup15.style.display = "none";
             popup16.style.display = "none";
-            injectStylesIntoIframe();
+            //injectStylesIntoIframe();
         }
  
        if (popup1) {
@@ -1190,6 +1463,85 @@ document.addEventListener('DOMContentLoaded', () => {
             
             
         }
+
+
+function injectStylesAndPopupsIntoIframe() {
+    const iframe = document.getElementById("iframe");
+    const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+    const cssFilePath = '{{ url_for("static", filename="popup_style.css") }}'; // Predefined CSS file path
+
+    try {
+        // Check if the iframe content is accessible
+        iframeDocument.domain;
+
+        // Create a link element for the external CSS file
+        const linkElement = iframeDocument.createElement('link');
+        linkElement.rel = 'stylesheet';
+        linkElement.href = cssFilePath; // Path to the external CSS file
+        
+        // Append the link element to the iframe's head
+        iframeDocument.head.appendChild(linkElement);
+
+        // Inject popup HTML
+        const popupHTML = `
+            <div id="popup-widget" style="display:none;">
+                <h1>Popup Widget</h1>
+                <p>This is the content of the popup widget.</p>
+            </div>
+            <div id="another-popup-widget" style="display:none;">
+                <h1>Another Popup</h1>
+                <p>This is the content of another popup widget.</p>
+            </div>`;
+        iframeDocument.body.insertAdjacentHTML('beforeend', popupHTML);
+
+        // Inject the toggle functions into the iframe
+        const scriptElement = iframeDocument.createElement('script');
+        scriptElement.textContent = `
+            console.log('Toggle script injected');
+            function togglePopup() {
+                console.log('Toggle popup called');
+                var popup = document.getElementById("popup-widget");
+                var anotherPopup = document.getElementById("another-popup-widget");
+
+                if (popup) {
+                    if (popup.style.display === "none") {
+                        popup.style.display = "block";
+                        if (anotherPopup) {
+                            anotherPopup.style.display = "none";
+                        }
+                    } else {
+                        popup.style.display = "none";
+                    }
+                }
+            }
+
+            function toggleAnotherPopup() {
+                console.log('Toggle another popup called');
+                var popup = document.getElementById("popup-widget");
+                var anotherPopup = document.getElementById("another-popup-widget");
+
+                if (anotherPopup) {
+                    if (anotherPopup.style.display === "none") {
+                        anotherPopup.style.display = "block";
+                        if (popup) {
+                            popup.style.display = "none";
+                        }
+                    } else {
+                        anotherPopup.style.display = "none";
+                    }
+                }
+            }
+
+            // Attach toggle functions to window for accessibility
+            window.togglePopup = togglePopup;
+            window.toggleAnotherPopup = toggleAnotherPopup;
+        `;
+        iframeDocument.body.appendChild(scriptElement);
+
+    } catch (e) {
+        console.error("Cannot inject into the iframe due to cross-origin restrictions.", e);
+    }
+}
 
 </script>
 
