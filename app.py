@@ -12,7 +12,7 @@ widgets = {
             <p>This is the content of the popup widget.</p>
             <style>
                 #popup-widget {
-                display: none;
+                display: block;
                 position: fixed;
                 z-index: 9999; /* Ensure it's above other content */
                 top: 50%;
