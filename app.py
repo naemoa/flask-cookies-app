@@ -94,20 +94,16 @@ def sign_up():
 @app.route('/widget')
 def widget():
     widget_id = request.args.get('id')
-    
-    widget_html = widgets.get(widget_id, "Invalid widget ID")
-    
-    if widget_html == "Invalid widget ID":
-        response = make_response(jsonify({"error": "Invalid widget ID"}), 400)
+
+    if widget_id == 'popup-widget':
+        # Example data for the popup widget
+        widget_data = {
+            'title': 'Popup Widget',
+            'content': 'This is a popup widget content.'
+        }
+        return f"document.getElementById('popupWidgetTitle').textContent = '{widget_data['title']}'; document.getElementById('popupWidgetContent').textContent = '{widget_data['content']}';"
     else:
-        response = make_response(render_template_string(widget_html))
-
-    # Manually add CORS headers
-    response.headers['Access-Control-Allow-Origin'] = '*'
-    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
-    response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
-
-    return response
+        return 'Widget not found', 404
 
 if __name__ == '__main__':
     app.run(debug=True)
