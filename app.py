@@ -1,9 +1,50 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, render_template_string, make_response, jsonify
 #from flask_cors import CORS
 import requests
 
 app = Flask(__name__)
 #CORS(app)
+# Dummy widget HTML content
+widgets = {
+    "popup-widget": """
+        <div id="popup-widget">
+            <h1>Popup Widget</h1>
+            <p>This is the content of the popup widget.</p>
+            <style>
+                #popup-widget {
+                    display: block;
+                    position: fixed;
+                    z-index: 9999;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: white;
+                    padding: 20px;
+                    border: 2px solid black;
+                }
+            </style>
+        </div>
+    """,
+    "another-popup-widget": """
+        <div id="another-popup-widget">
+            <h1>Another Popup Widget</h1>
+            <p>This is the content of another popup widget.</p>
+            <style>
+                #another-popup-widget {
+                    display: block;
+                    position: fixed;
+                    z-index: 9999;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: white;
+                    padding: 20px;
+                    border: 2px solid black;
+                }
+            </style>
+        </div>
+    """
+    }
 
 @app.route('/popup')
 def popup():
@@ -49,6 +90,24 @@ def sign_in():
 def sign_up():
     return render_template('sign-up.html', title='Sign Up')
 
+
+@app.route('/widget')
+def widget():
+    widget_id = request.args.get('id')
+    
+    widget_html = widgets.get(widget_id, "Invalid widget ID")
+    
+    if widget_html == "Invalid widget ID":
+        response = make_response(jsonify({"error": "Invalid widget ID"}), 400)
+    else:
+        response = make_response(render_template_string(widget_html))
+
+    # Manually add CORS headers
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
+    response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+
+    return response
 if __name__ == '__main__':
     app.run(debug=True)
 
