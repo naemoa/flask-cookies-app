@@ -95,7 +95,7 @@ def sign_up():
 def embed_widget():
     widget_id = request.args.get('id')
 
-    if widget_id == 'popup-widget':
+    if widget_id == 'popup_widget':
         # Example data for the popup widget
         widget_data = {
             'title': 'Popup Widget',
