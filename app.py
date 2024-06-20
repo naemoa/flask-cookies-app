@@ -12,16 +12,16 @@ widgets = {
             <p>This is the content of the popup widget.</p>
             <style>
                 #popup-widget {
-                    display: block;
-                    position: fixed;
-                    z-index: 9999;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    background-color: white;
-                    padding: 20px;
-                    border: 2px solid black;
-                }
+                display: none;
+                position: fixed;
+                z-index: 9999; /* Ensure it's above other content */
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: white;
+                padding: 20px;
+                border: 2px solid black;
+            }
             </style>
         </div>
     """,
@@ -108,6 +108,7 @@ def widget():
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
 
     return response
+
 if __name__ == '__main__':
     app.run(debug=True)
 
