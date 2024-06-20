@@ -1,1 +1,2 @@
 I installed flask cors to allow external websites access my website
+control k comments out a full line

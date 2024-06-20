@@ -29,53 +29,6 @@ def tables():
 def billing():
     return render_template('billing.html', title='Billing')
 
-@app.route('/widget')
-def widget():
-     widget_id = request.args.get('id')
-     widgets = {
-        "popup-widget": """
-            <div id="popup-widget">
-                <h1>Popup Widget</h1>
-                <p>This is the content of the popup widget.</p>
-                <style>
-                    #popup-widget {
-                        display: block;
-                        position: fixed;
-                        z-index: 9999;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        background-color: white;
-                        padding: 20px;
-                        border: 2px solid black;
-                    }
-                </style>
-            </div>
-        """,
-        "popup-widget1": """
-            <div id="popup-widget1">
-                <h1>Another Popup Widget</h1>
-                <p>This is the content of another popup widget.</p>
-                <style>
-                    #popup-widget1 {
-                        display: block;
-                        position: fixed;
-                        z-index: 9999;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        background-color: white;
-                        padding: 20px;
-                        border: 2px solid black;
-                    }
-                </style>
-            </div>
-        """
-    }
-     widget_html = widgets.get(widget_id, "Invalid widget ID")
-     if widget_html == "Invalid widget ID": return jsonify({"error": "Invalid widget ID"}), 400
-     return widget_html
-
 @app.route('/rtl')
 def rtl():
     return render_template('rtl.html', title='RTL')
