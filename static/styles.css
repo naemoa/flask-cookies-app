@@ -1,0 +1,7 @@
+/* CSS styles for widget container */
+.widget-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+}

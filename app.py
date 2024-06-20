@@ -91,8 +91,8 @@ def sign_up():
     return render_template('sign-up.html', title='Sign Up')
 
 
-@app.route('/widget')
-def widget():
+@app.route('/widget/embed')
+def embed_widget():
     widget_id = request.args.get('id')
 
     if widget_id == 'popup-widget':
@@ -101,7 +101,7 @@ def widget():
             'title': 'Popup Widget',
             'content': 'This is a popup widget content.'
         }
-        return f"document.getElementById('popupWidgetTitle').textContent = '{widget_data['title']}'; document.getElementById('popupWidgetContent').textContent = '{widget_data['content']}';"
+        return render_template('embed_widget.js', widget_data=widget_data)
     else:
         return 'Widget not found', 404
 
