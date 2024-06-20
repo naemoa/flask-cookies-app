@@ -1,7 +1,9 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
 import requests
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/popup')
 def popup():
@@ -17,7 +19,7 @@ def popup():
 
 @app.route('/')
 def index():
-    return render_template('dashboard.html', title='Dashboard')
+    return render_template('editor.html', title='Dashboard')
 
 @app.route('/tables')
 def tables():
@@ -29,7 +31,50 @@ def billing():
 
 @app.route('/widget')
 def widget():
-    return render_template('widget.html', title='Widget Editor')
+     widget_id = request.args.get('id')
+     widgets = {
+        "popup-widget": """
+            <div id="popup-widget">
+                <h1>Popup Widget</h1>
+                <p>This is the content of the popup widget.</p>
+                <style>
+                    #popup-widget {
+                        display: block;
+                        position: fixed;
+                        z-index: 9999;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background-color: white;
+                        padding: 20px;
+                        border: 2px solid black;
+                    }
+                </style>
+            </div>
+        """,
+        "popup-widget1": """
+            <div id="popup-widget1">
+                <h1>Another Popup Widget</h1>
+                <p>This is the content of another popup widget.</p>
+                <style>
+                    #popup-widget1 {
+                        display: block;
+                        position: fixed;
+                        z-index: 9999;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background-color: white;
+                        padding: 20px;
+                        border: 2px solid black;
+                    }
+                </style>
+            </div>
+        """
+    }
+     widget_html = widgets.get(widget_id, "Invalid widget ID")
+     if widget_html == "Invalid widget ID": return jsonify({"error": "Invalid widget ID"}), 400
+     return widget_html
 
 @app.route('/rtl')
 def rtl():

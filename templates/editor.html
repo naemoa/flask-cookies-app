@@ -1769,125 +1769,6 @@ iframeDocument.head.appendChild(linkElement);
     function savePopupContent() {
         const iframe = document.getElementById("iframe");
         const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-        const popupWidget = iframeDocument.getElementById("popup-widget");
-        const popupWidget1 = iframeDocument.getElementById("popup-widget1");
-
-        let activePopup;
-        if (popupWidget && popupWidget.style.display === "block") {
-            activePopup = popupWidget;
-        } else if (popupWidget1 && popupWidget1.style.display === "block") {
-            activePopup = popupWidget1;
-        }
-
-        if (activePopup) {
-            const popupHTML = activePopup.outerHTML;
-            const popupCSS = Array.from(iframeDocument.styleSheets)
-                .map(sheet => Array.from(sheet.cssRules).map(rule => rule.cssText).join('\n'))
-                .join('\n');
-            
-            const fullContent = `
-                <style>
-                ${popupCSS}
-                </style>
-                ${popupHTML}
-            `;
-            navigator.clipboard.writeText(fullContent).then(() => {
-                alert("Popup content copied to clipboard!");
-            }).catch(err => {
-                console.error("Failed to copy popup content: ", err);
-            });
-        } else {
-            alert("No active popup to save.");
-        }
-    }
-</script>
-
-<script>
-    /*function savePopupContent() {
-        const iframe = document.getElementById("iframe");
-        const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-        const popupWidget = iframeDocument.getElementById("popup-widget");
-        const popupWidget1 = iframeDocument.getElementById("popup-widget1");
-
-        let activePopup;
-        if (popupWidget && popupWidget.style.display === "block") {
-            activePopup = popupWidget;
-        } else if (popupWidget1 && popupWidget1.style.display === "block") {
-            activePopup = popupWidget1;
-        }
-
-        if (activePopup) {
-            const popupHTML = encodeURIComponent(activePopup.outerHTML);
-            const popupCSS = encodeURIComponent(Array.from(iframeDocument.styleSheets)
-                .map(sheet => Array.from(sheet.cssRules).map(rule => rule.cssText).join('\n'))
-                .join('\n'));
-
-            const toggleFunctions = `
-                function togglePopup() {
-                    var popup = document.getElementById("popup-widget");
-                    var popup1 = document.getElementById("popup-widget1");
-
-                    if (popup) {
-                        if (popup.style.display === "none") {
-                            popup.style.display = "block";
-                            if (popup1) {
-                                popup1.style.display = "none";
-                            }
-                        } else {
-                            popup.style.display = "none";
-                        }
-                    }
-                }
-
-                function togglePopup1() {
-                    var popup = document.getElementById("popup-widget");
-                    var popup1 = document.getElementById("popup-widget1");
-
-                    if (popup1) {
-                        if (popup1.style.display === "none") {
-                            popup1.style.display = "block";
-                            if (popup) {
-                                popup.style.display = "none";
-                            }
-                        } else {
-                            popup1.style.display = "none";
-                        }
-                    }
-                }
-            `;
-
-            const fullContent = `
-                <script>
-                ${toggleFunctions}
-                document.addEventListener("DOMContentLoaded", function() {
-                    var style = document.createElement("style");
-                    style.textContent = decodeURIComponent("${popupCSS}");
-                    document.head.appendChild(style);
-
-                    var div = document.createElement("div");
-                    div.innerHTML = decodeURIComponent("${popupHTML}");
-                    document.body.appendChild(div);
-                });
-                <\/script>
-            `;
-
-            const url = `data:text/html;base64,${btoa(fullContent)}`;
-
-            navigator.clipboard.writeText(url).then(() => {
-                alert("URL copied to clipboard! Paste this URL into the <head> section of your website to display the popup.");
-            }).catch(err => {
-                console.error("Failed to copy URL: ", err);
-            });
-        } else {
-            alert("No active popup to save.");
-        }
-    } */
-</script>
-
-<script>
-   /* function savePopupContent() {
-        const iframe = document.getElementById("iframe");
-        const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
 
         let activeWidgetId = null;
 
@@ -1908,16 +1789,16 @@ iframeDocument.head.appendChild(linkElement);
             return;
         }
 
-        const url = `"https://" +widgetapp-531000083b96.herokuapp.com/widget?id=${activeWidgetId}`;
+        const url = `https:\/\/widgetapp-531000083b96.herokuapp.com/editor?id=${activeWidgetId}`;
 
-               navigator.clipboard.writeText(`<script src=${url}'></script>`)
+               navigator.clipboard.writeText(`<script src="${url}"><\/script>`)
             .then(() => {
-                alert(`Script URL for the active widget with ID ${activeWidgetId} copied to clipboard! Paste this script tag into the <head> section of your website to display the popup.`);
+                alert(`Script URL for the active widget with ID ${activeWidgetId} copied to clipboard! Paste this script tag into the <head> <\/head> section of your website to display the popup.`);
             })
             .catch(err => {
                 console.error("Failed to copy script URL: ", err);
             });
-    }*/
+    }
 </script>
 
 
