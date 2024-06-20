@@ -10,7 +10,7 @@ def popup():
         try:
             page_content = requests.get(website_url).text
         except requests.exceptions.RequestException as e:
-            page_content = f"<h3>Error: {e}</h3><div>Succeed we must</div>"
+            page_content = f"<h3>Error: {e}"
     else:
         page_content = '<h3>No website preview available.</h3>'
     return render_template('popup.html', page_content=page_content, website_url=website_url)
