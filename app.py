@@ -91,7 +91,7 @@ def sign_up():
     return render_template('sign-up.html', title='Sign Up')
 
 
-@app.route('/widget/embed')
+@app.route('/widget')
 def embed_widget():
     widget_id = request.args.get('id')
 
