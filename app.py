@@ -92,18 +92,31 @@ def sign_up():
 
 
 @app.route('/widget')
-def embed_widget():
+def widget():
     widget_id = request.args.get('id')
 
-    if widget_id == 'popup_widget':
+    if widget_id == 'popup-widget1':
         # Example data for the popup widget
         widget_data = {
-            'title': 'Popup Widget',
-            'content': 'This is a popup widget content.'
+            'title': 'Popup Widget 1',
+            'content': 'This is the content for popup widget 1.'
         }
-        return render_template('embed_widget.js', widget_data=widget_data)
+        return jsonify(widget_data)
+    elif widget_id == 'popup-widget2':
+        # Example data for another widget
+        widget_data = {
+            'title': 'Popup Widget 2',
+            'content': 'This is the content for popup widget 2.'
+        }
+        return jsonify(widget_data)
     else:
-        return 'Widget not found', 404
+        return jsonify({'error': 'Widget not found'}), 404
+
+# Route to serve embedding JavaScript
+@app.route('/widget/embed')
+def embed_widget():
+    widget_id = request.args.get('id')
+    return render_template('embed_widget.js', widget_id=widget_id)
 
 if __name__ == '__main__':
     app.run(debug=True)
