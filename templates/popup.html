@@ -48,10 +48,37 @@
         flex: 0 0 100%;
     }
 }
+
+/* popup-widget CSS start */
+#popup-widget {
+    display: none;
+    position: fixed;
+    z-index: .9;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* popup-widget CSS end */
+
+/* popup-widget1 CSS start */
+#another-popup-widget {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* popup-widget1 CSS end */
   </style>
   
 </head>
 <body>
+    <!-- popup-widget HTML start -->
 <div class="popup-widget" id="popup-widget">
                                         <div class="card bg-gradient-dark move-on-hover">
                                                         <div class="card-body">
@@ -63,7 +90,9 @@
                                                         <div class=" justify-content-center align-items-center d-flex"> <a href="#" class="btn  btn-white btn-sm w-80 mb-3">OKAY</a></div>
                                                     </div>
                                                 </div>
-<div class="popup-widget1" id="popup-widget1">
+    <!-- popup-widget HTML end -->
+ <!-- popup-widget1 HTML start -->
+ <div class="popup-widget1" id="popup-widget1">
     <div class="card card-background card-background-mask-primary1 move-on-hover align-items-start">
                                                         <div class="cursor-pointer">
                                                             <div class="full-background" style="background-image: url('{{ url_for('static', filename='img/curved-images/curved1.jpg') }}')"></div>
@@ -80,6 +109,9 @@
                                                         </div>
                                                     </div>
 </div>
+
+ <!-- another-popup-widget HTML end -->
+
 <div class="popup-widget2" id="popup-widget2">
    <div class="card card-background1 card-background-mask-secondary1 bg-gradient-faded-warning move-on-hover align-items-start">
                                                         <div class="cursor-pointer">

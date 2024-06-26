@@ -1766,7 +1766,7 @@ iframeDocument.head.appendChild(linkElement);
 </script>
 
 <script>
-    function savePopupContent() {
+ /*   function savePopupContent() {
         const iframe = document.getElementById("iframe");
         const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
 
@@ -1799,6 +1799,47 @@ iframeDocument.head.appendChild(linkElement);
                 console.error("Failed to copy script URL: ", err);
             });
     }
+*/
+function savePopupContent() {
+            const iframe = document.getElementById("iframe");
+            const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+            let activeWidgetId = null;
+
+            // Determine active widget ID based on its visibility or any other criteria
+            const popupWidget = iframeDocument.getElementById("popup-widget");
+            if (popupWidget && popupWidget.style.display === "block") {
+                activeWidgetId = "popup-widget";
+            }
+
+            const anotherPopupWidget = iframeDocument.getElementById("popup-widget1");
+            if (anotherPopupWidget && anotherPopupWidget.style.display === "block") {
+                activeWidgetId = "another-popup-widget";
+            }
+
+            if (!activeWidgetId) {
+                alert("No active widget to save.");
+                return;
+            }
+
+            const baseUrl = "http://127.0.0.1:5000";  // Replace with your server's base URL
+            const widgetUrl = `${baseUrl}/widget/${activeWidgetId}.js`;
+
+            // Generate script tag
+            const scriptTag = `<script src="${widgetUrl}"><\/script>`;
+
+            // Copy script tag to clipboard
+            navigator.clipboard.writeText(scriptTag)
+                .then(() => {
+                    alert(`Script tag copied to clipboard! Paste this script tag into the <head> section of your website to display the popup.`);
+                })
+                .catch(err => {
+                    console.error("Failed to copy script tag: ", err);
+                });
+        }
+
+        document.getElementById("saveButton").addEventListener("click", savePopupContent);
+    
 </script>
 
 
