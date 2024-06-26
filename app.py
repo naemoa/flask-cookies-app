@@ -5,46 +5,7 @@ import requests
 app = Flask(__name__)
 #CORS(app)
 # Dummy widget HTML content
-widgets = {
-    "popup-widget": """
-        <div id="popup-widget">
-            <h1>Popup Widget</h1>
-            <p>This is the content of the popup widget.</p>
-            <style>
-                #popup-widget {
-                display: block;
-                position: fixed;
-                z-index: 9999; /* Ensure it's above other content */
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-color: white;
-                padding: 20px;
-                border: 2px solid black;
-            }
-            </style>
-        </div>
-    """,
-    "another-popup-widget": """
-        <div id="another-popup-widget">
-            <h1>Another Popup Widget</h1>
-            <p>This is the content of another popup widget.</p>
-            <style>
-                #another-popup-widget {
-                    display: block;
-                    position: fixed;
-                    z-index: 9999;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    background-color: white;
-                    padding: 20px;
-                    border: 2px solid black;
-                }
-            </style>
-        </div>
-    """
-    }
+
 
 @app.route('/popup')
 def popup():
@@ -91,6 +52,7 @@ def sign_up():
     return render_template('sign-up.html', title='Sign Up')
 
 
+# Example route for widget data
 @app.route('/widget')
 def widget():
     widget_id = request.args.get('id')
@@ -116,7 +78,35 @@ def widget():
 @app.route('/widget/embed')
 def embed_widget():
     widget_id = request.args.get('id')
-    return render_template('embed_widget.js', widget_id=widget_id)
+    return render_template_string("""
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var widgetId = "{{ widget_id }}";
+        fetch('https://app.ceralda.com/widget?id=' + widgetId)
+            .then(response => response.json())
+            .then(widgetData => {
+                if (widgetData.error) {
+                    throw new Error(widgetData.error);
+                }
+                
+                var widgetContainer = document.createElement('div');
+                widgetContainer.classList.add('widget-container');
+                
+                var titleElement = document.createElement('h2');
+                titleElement.textContent = widgetData.title;
+                
+                var contentElement = document.createElement('p');
+                contentElement.textContent = widgetData.content;
+                
+                widgetContainer.appendChild(titleElement);
+                widgetContainer.appendChild(contentElement);
+                
+                document.body.appendChild(widgetContainer);
+            })
+            .catch(error => console.error('Error fetching widget:', error));
+    });
+    </script>
+    """, widget_id=widget_id)
 
 if __name__ == '__main__':
     app.run(debug=True)
