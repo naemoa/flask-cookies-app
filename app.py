@@ -57,7 +57,7 @@ def popup():
 
 @app.route('/')
 def index():
-    return render_template('editor.html', title='Dashboard')
+    return render_template('editor.html', title='Widgets')
 
 @app.route('/tables')
 def tables():
@@ -67,9 +67,9 @@ def tables():
 def billing():
     return render_template('billing.html', title='Billing')
 
-@app.route('/rtl')
+@app.route('/dashboard')
 def rtl():
-    return render_template('rtl.html', title='RTL')
+    return render_template('dashboard.html', title='Dashboard')
 
 @app.route('/profile')
 def profile():
