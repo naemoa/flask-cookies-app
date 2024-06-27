@@ -1,20 +1,27 @@
 
-        // JavaScript code to inject HTML and CSS for popup-widget
+        // JavaScript code to inject HTML and CSS for popup-widget9
         (function() {
-            var html = `<div class="popup-widget" id="popup-widget">
-                                        <div class="card bg-gradient-dark move-on-hover">
-                                                        <div class="card-body">
-                                                            <div class="d-flex">
-                                                                <h5 class="mb-0 text-white">Accept <i class="fas fa-solid fa-cookie-bite"></i> ?</h5>
+            var html = `<div class="popup-widget9" id="popup-widget9">
+     <div class="card card-background card-background-mask-primary1 move-on-hover align-items-start">
+                                                        <div class="cursor-pointer">
+                                                            <div class="full-background" style="background-image: url('{{ url_for('static', filename='img/curved-images/curved8.jpg') }}');  background-size: cover;"
+                                                            ></div>
+                                                            <div class="card-body">
+                                                                <div class="d-flex">
+                                                                    <h5 class="mb-0 text-white">Accept <i class="fas fa-solid fa-cookie-bite"></i> ?</h5>
+                                                                </div>                              <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
+                                         <div class="d-flex mt-2">
+                                                                    <button class="btn bg-gradient-primary w-100 px-3 mb-1 active" data-class="bg-transparent">Deny</button>
+                                                                    <button class="btn bg-gradient-secondary w-100 px-3 mb-1 ms-2" data-class="bg-white" >Accept</button>
+                                                                </div>
+                                                                
                                                             </div>
-                                                            <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
                                                         </div>
-                                                        <div class=" justify-content-center align-items-center d-flex"> <a href="#" class="btn  btn-white btn-sm w-80 mb-3" onclick="document.getElementById('popup-widget').style.display = 'none';" >OKAY</a></div>
                                                     </div>
-                                                </div>`;
+  </div>`;
             var css = `.preview_container { max-width: 90%; margin: 50px auto; padding: 20px; background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px; border-radius: 5px; }
 iframe { width: 100%; height: 300px; border: none; margin-top: 20px; }
-.popup-widget { display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px; z-index: 9999; border-radius: 5px; }
+.popup-widget { display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px; z-index: 9999; border-radius: 5px; }
 .popup-widget1 { display: none; position: absolute; top: 40%; left: 60%; transform: translate(-50%, -50%); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px; z-index: 9999; border-radius: 5px; }
 .popup-widget2 { display: none; position: absolute; top: 30%; left: 70%; transform: translate(-50%, -50%); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px; z-index: 9999; border-radius: 5px; }
 .popup-widget3 { display: none; position: absolute; top: 70%; left: 30%; transform: translate(-50%, -50%); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px; z-index: 9999; border-radius: 5px; }
@@ -5295,7 +5302,7 @@ iframe .project-slider { display: flex; overflow-x: auto; scroll-snap-type: x ma
 }
  `;
             var js = `
-            document.getElementById('popup-widget').style.display = 'block';
+            document.getElementById('popup-widget9').style.display = 'block';
         `;
 
             // Inject CSS

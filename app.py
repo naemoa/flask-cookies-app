@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, render_template_string, make_
 #from flask_cors import CORS
 import requests
 import os
+import re
 app = Flask(__name__)
 
 
@@ -18,12 +19,9 @@ def read_widget_content(widget_id):
     
     start_html = f'<!-- {widget_id} HTML start -->'
     end_html = f'<!-- {widget_id} HTML end -->'
-    start_css = f'/* {widget_id} CSS start */'
-    end_css = f'/* {widget_id} CSS end */'
     
     html_content = []
-    css_content = []
-    in_html = in_css = False
+    in_html = False
     
     for line in lines:
         if start_html in line:
@@ -32,26 +30,18 @@ def read_widget_content(widget_id):
         if end_html in line:
             in_html = False
         
-        if start_css in line:
-            in_css = True
-            continue
-        if end_css in line:
-            in_css = False
-        
         if in_html:
             html_content.append(line)
-        if in_css:
-            css_content.append(line)
     
     html_content = ''.join(html_content).strip()
-    css_content = ''.join(css_content).strip()
     
-    return html_content, css_content
+    return html_content
 
 def read_general_css():
-    css_file_path = os.path.join(app.root_path, 'static/css', 'soft-ui-dashboard.min.css')
+    css_file_path = os.path.join(app.root_path, 'static', 'popup.css')
     with open(css_file_path, 'r') as file:
-        return file.read()
+        css_content = file.read()
+    return css_content
 
 @app.route('/popup')
 def popup():
@@ -97,19 +87,17 @@ def sign_in():
 def sign_up():
     return render_template('sign-up.html', title='Sign Up')
 
-@app.route('/generated_js/<path:path>')
-def send_js(path):
-    return send_from_directory('generated_js', path)
+# @app.route('/generated_js/<path:path>')
+# def send_js(path):
+#     return send_from_directory('generated_js', path)
 
 
-
-# Example route for widget data
 @app.route('/widget/<widget_id>.js', methods=['GET'])
 def serve_widget_js(widget_id):
-    html_content, css_content = read_widget_content(widget_id)
-    general_css = read_general_css()
+    html_content = read_widget_content(widget_id)
+    css_content = read_general_css()
     
-    if html_content and css_content and general_css:
+    if html_content and css_content:
         js_content = f"""
         // JavaScript code to inject HTML and CSS for {widget_id}
         (function() {{

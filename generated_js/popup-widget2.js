@@ -1,17 +1,25 @@
 
-        // JavaScript code to inject HTML and CSS for popup-widget
+        // JavaScript code to inject HTML and CSS for popup-widget2
         (function() {
-            var html = `<div class="popup-widget" id="popup-widget">
-                                        <div class="card bg-gradient-dark move-on-hover">
-                                                        <div class="card-body">
-                                                            <div class="d-flex">
-                                                                <h5 class="mb-0 text-white">Accept <i class="fas fa-solid fa-cookie-bite"></i> ?</h5>
+            var html = `<div class="popup-widget2" id="popup-widget2">
+   <div class="card card-background1 card-background-mask-secondary1 bg-gradient-faded-warning move-on-hover align-items-start">
+                                                        <div class="cursor-pointer">
+                                                            
+                                                            <div class="card-body">
+                                                                <div class="d-flex">
+                                                                    <h5 class="mb-0 text-dark">Accept <i class="fas fa-solid fa-cookie-bite"></i> ?</h5>
+                                                                </div>                              <p class="text-dark mb-0">We use cookies to offer the best experience to you</p>
+                                                                
+                                                                
+                                                                
                                                             </div>
-                                                            <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
-                                                        </div>
-                                                        <div class=" justify-content-center align-items-center d-flex"> <a href="#" class="btn  btn-white btn-sm w-80 mb-3" onclick="document.getElementById('popup-widget').style.display = 'none';" >OKAY</a></div>
+                                                            <div class="d-flex bg-warning mt-2">
+                                                                <button class="btn bg-gradient-dark w-100 px-0 mb-1 active" data-class="bg-transparent" onclick="document.getElementById('popup-widget2').style.display = 'none';">Privacy Policy</button>
+                                                                <button class="btn bg-gradient-success w-100 px-0 mb-1 ms-2" data-class="bg-white" onclick="document.getElementById('popup-widget2').style.display = 'none';">Accept</button>
+                                                            </div>                                  </div>
                                                     </div>
-                                                </div>`;
+   
+</div>`;
             var css = `.preview_container { max-width: 90%; margin: 50px auto; padding: 20px; background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px; border-radius: 5px; }
 iframe { width: 100%; height: 300px; border: none; margin-top: 20px; }
 .popup-widget { display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px; z-index: 9999; border-radius: 5px; }
@@ -5295,7 +5303,7 @@ iframe .project-slider { display: flex; overflow-x: auto; scroll-snap-type: x ma
 }
  `;
             var js = `
-            document.getElementById('popup-widget').style.display = 'block';
+            document.getElementById('popup-widget2').style.display = 'block';
         `;
 
             // Inject CSS

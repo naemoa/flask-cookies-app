@@ -49,31 +49,6 @@
     }
 }
 
-/* popup-widget CSS start */
-#popup-widget {
-    display: none;
-    position: fixed;
-    z-index: .9;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-/* popup-widget CSS end */
-
-/* popup-widget1 CSS start */
-#another-popup-widget {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-/* popup-widget1 CSS end */
   </style>
   
 </head>
@@ -87,10 +62,11 @@
                                                             </div>
                                                             <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
                                                         </div>
-                                                        <div class=" justify-content-center align-items-center d-flex"> <a href="#" class="btn  btn-white btn-sm w-80 mb-3">OKAY</a></div>
+                                                        <div class=" justify-content-center align-items-center d-flex"> <a href="#" class="btn  btn-white btn-sm w-80 mb-3" onclick="document.getElementById('popup-widget').style.display = 'none';" >OKAY</a></div>
                                                     </div>
                                                 </div>
     <!-- popup-widget HTML end -->
+    
  <!-- popup-widget1 HTML start -->
  <div class="popup-widget1" id="popup-widget1">
     <div class="card card-background card-background-mask-primary1 move-on-hover align-items-start">
@@ -101,17 +77,17 @@
                                                                     <h5 class="mb-0 text-white">Accept <i class="fas fa-solid fa-cookie-bite"></i> ?</h5>
                                                                 </div>                              <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
                    <div class="d-flex1 mt-21">
-                                                                    <button class="btn bg-gradient-dark w-100 px-3 mb-1 active" data-class="bg-transparent">Deny</button>
-                                                                    <button class="btn bg-gradient-success w-100 px-3 mb-1 ms-21" data-class="bg-white" >Accept</button>
+                                                                    <button class="btn bg-gradient-dark w-100 px-3 mb-1 active" data-class="bg-transparent" onclick="document.getElementById('popup-widget1').style.display = 'none';">Deny</button>
+                                                                    <button class="btn bg-gradient-success w-100 px-3 mb-1 ms-21" data-class="bg-white" onclick="document.getElementById('popup-widget1').style.display = 'none';">Accept</button>
                                                                 </div>
                                                                 
                                                             </div>
                                                         </div>
                                                     </div>
 </div>
+ <!-- popup-widget1 HTML end -->
 
- <!-- another-popup-widget HTML end -->
-
+<!-- popup-widget2 HTML start -->
 <div class="popup-widget2" id="popup-widget2">
    <div class="card card-background1 card-background-mask-secondary1 bg-gradient-faded-warning move-on-hover align-items-start">
                                                         <div class="cursor-pointer">
@@ -125,13 +101,16 @@
                                                                 
                                                             </div>
                                                             <div class="d-flex bg-warning mt-2">
-                                                                <button class="btn bg-gradient-dark w-100 px-0 mb-1 active" data-class="bg-transparent">Privacy Policy</button>
-                                                                <button class="btn bg-gradient-success w-100 px-0 mb-1 ms-2" data-class="bg-white" >Accept</button>
+                                                                <button class="btn bg-gradient-dark w-100 px-0 mb-1 active" data-class="bg-transparent" onclick="document.getElementById('popup-widget2').style.display = 'none';">Privacy Policy</button>
+                                                                <button class="btn bg-gradient-success w-100 px-0 mb-1 ms-2" data-class="bg-white" onclick="document.getElementById('popup-widget2').style.display = 'none';">Accept</button>
                                                             </div>                                  </div>
                                                     </div>
    
 </div>
-<div class="popup-widget3" id="popup-widget3"> 
+<!-- popup-widget2 HTML end -->
+
+<!-- popup-widget3 HTML start -->
+    <div class="popup-widget3" id="popup-widget3"> 
   <div class="card bg-gradient-faded-primary move-on-hover align-items-start">
                                                         <div class="cursor-pointer">
                                                             
@@ -140,15 +119,18 @@
                                                                     <h5 class="mb-0 text-white">Accept <i class="fas fa-solid fa-cookie-bite"></i> ?</h5>
                                                                 </div>                              <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
                                 <div class="d-flex mt-2">
-                                                                    <button class="btn bg-gradient-dark w-1001 px-3 mb-1 active" data-class="bg-transparent">Deny</button>
-                                                                    <button class="btn bg-gradient-success w-1001 px-3 mb-1 ms-2" data-class="bg-white" >Accept</button>
+                                                                    <button class="btn bg-gradient-dark w-1001 px-3 mb-1 active" data-class="bg-transparent" onclick="document.getElementById('popup-widget3').style.display = 'none';">Deny</button>
+                                                                    <button class="btn bg-gradient-success w-1001 px-3 mb-1 ms-2" data-class="bg-white" onclick="document.getElementById('popup-widget3').style.display = 'none';">Accept</button>
                                                                 </div>
                                                                 
                                                             </div>
                                                         </div>
                                                     </div>
       </div>
-<div class="popup-widget4" id="popup-widget4"> 
+<!-- popup-widget3 HTML end -->
+
+<!-- popup-widget4 HTML start -->
+    <div class="popup-widget4" id="popup-widget4"> 
      <div class="card bg-gradient-faded-secondary move-on-hover align-items-start">
                                                         <div class="cursor-pointer">
                                                             
@@ -157,15 +139,18 @@
                                                                     <h5 class="mb-0 text-white">Accept <i class="fas fa-solid fa-cookie-bite"></i> ?</h5>
                                                                 </div>                              <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
                                                                 <div class="d-flex mt-2 justify-content-center">
-                                                                    <button class="btn bg-gradient-dark w-1001 px-3 mb-1 active" data-class="bg-transparent">Deny</button>
-                                                                    <button class="btn bg-gradient-success align-items-end w-1001 px-3 mb-1 ms-2" data-class="bg-white" >Accept</button>
+                                                                    <button class="btn bg-gradient-dark w-1001 px-3 mb-1 active" data-class="bg-transparent" onclick="document.getElementById('popup-widget4').style.display = 'none';">Deny</button>
+                                                                    <button class="btn bg-gradient-success align-items-end w-1001 px-3 mb-1 ms-2" data-class="bg-white" onclick="document.getElementById('popup-widget4').style.display = 'none';">Accept</button>
                                                                 </div>
                                                                 
                                                             </div>
                                                         </div>
                                                     </div>
    </div>
-<div class="popup-widget5" id="popup-widget5"> 
+<!-- popup-widget4 HTML end -->
+
+<!-- popup-widget5 HTML start -->
+    <div class="popup-widget5" id="popup-widget5"> 
      <div class="card bg-gradient-faded-success  move-on-hover align-items-start">
                                                         <div class="cursor-pointer">
                                                             
@@ -175,15 +160,18 @@
                                                                 </div>                              <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
     
                                                                 <div class="d-flex mt-2">
-                                                                    <button class="btn bg-gradient-dark w-100 px-3 mb-1 active" data-class="bg-transparent">Deny</button>
-                                                                    <button class="btn bg-gradient-success w-100 px-3 mb-1 ms-2" data-class="bg-white" >Accept</button>
+                                                                    <button class="btn bg-gradient-dark w-100 px-3 mb-1 active" data-class="bg-transparent" onclick="document.getElementById('popup-widget5').style.display = 'none';">Deny</button>
+                                                                    <button class="btn bg-gradient-success w-100 px-3 mb-1 ms-2" data-class="bg-white" onclick="document.getElementById('popup-widget5').style.display = 'none';">Accept</button>
                                                                 </div>
                                                                 
                                                             </div>
                                                         </div>
                                                     </div>
   </div>
-<div class="popup-widget6" id="popup-widget6"> 
+<!-- popup-widget5 HTML end -->
+
+<!-- popup-widget6 HTML start -->
+    <div class="popup-widget6" id="popup-widget6"> 
   <div class="card bg-gradient-faded-info move-on-hover align-items-start">
                                                         <div class="cursor-pointer">
                                                             
@@ -198,15 +186,18 @@
                                                                 
                                                                 
                                                                 <div class="d-flex mt-2">
-                                                                    <button class="btn bg-gradient-dark w-100 px-3 mb-1 active" data-class="bg-transparent">Deny</button>
-                                                                    <button class="btn bg-gradient-success w-100 px-3 mb-1 ms-2" data-class="bg-white" >Accept</button>
+                                                                    <button class="btn bg-gradient-dark w-100 px-3 mb-1 active" data-class="bg-transparent" onclick="document.getElementById('popup-widget6').style.display = 'none';">Deny</button>
+                                                                    <button class="btn bg-gradient-success w-100 px-3 mb-1 ms-2" data-class="bg-white" onclick="document.getElementById('popup-widget6').style.display = 'none';">Accept</button>
                                                                 </div>
                                                                 
                                                             </div>
                                                         </div>
                                                     </div>
    </div>
-<div class="popup-widget7" id="popup-widget7"> 
+<!-- popup-widget6 HTML end -->
+
+<!-- popup-widget7 HTML start -->
+    <div class="popup-widget7" id="popup-widget7"> 
      <div class="card bg-gradient-faded-warning move-on-hover align-items-start">
                                                         <div class="cursor-pointer">
                                                             
@@ -221,15 +212,18 @@
                                                      
                                                                 
                                                                 <div class="d-flex mt-2">
-                                                                    <button class="btn bg-gradient-dark w-100 px-3 mb-1 active" data-class="bg-transparent">Deny</button>
-                                                                    <button class="btn bg-gradient-success w-100 px-3 mb-1 ms-2" data-class="bg-white" >Accept</button>
+                                                                    <button class="btn bg-gradient-dark w-100 px-3 mb-1 active" data-class="bg-transparent" onclick="document.getElementById('popup-widget7').style.display = 'none';">Deny</button>
+                                                                    <button class="btn bg-gradient-success w-100 px-3 mb-1 ms-2" data-class="bg-white" onclick="document.getElementById('popup-widget7').style.display = 'none';">Accept</button>
                                                                 </div>
                                                                 
                                                             </div>
                                                         </div>
                                                     </div>
   </div>
-<div class="popup-widget8" id="popup-widget8"> 
+<!-- popup-widget7 HTML end -->
+
+<!-- popup-widget8 HTML start -->
+    <div class="popup-widget8" id="popup-widget8"> 
      <div class="card bg-gradient-faded-danger move-on-hover align-items-start">
                                                         <div class="cursor-pointer">
                                                             
@@ -238,15 +232,18 @@
                                                                     <h5 class="mb-0 text-white">Accept <i class="fas fa-solid fa-cookie-bite"></i> ?</h5>
                                                                 </div>                              <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
                                          <div class="d-flex mt-2">
-                                                                    <button class="btn bg-gradient-dark w-100 px-3 mb-1 active" data-class="bg-transparent">Deny</button>
-                                                                    <button class="btn bg-gradient-success w-100 px-3 mb-1 ms-2" data-class="bg-white" >Accept</button>
+                                                                    <button class="btn bg-gradient-dark w-100 px-3 mb-1 active" data-class="bg-transparent" onclick="document.getElementById('popup-widget8').style.display = 'none';">Deny</button>
+                                                                    <button class="btn bg-gradient-success w-100 px-3 mb-1 ms-2" data-class="bg-white" onclick="document.getElementById('popup-widget8').style.display = 'none';">Accept</button>
                                                                 </div>
                                                                 
                                                             </div>
                                                         </div>
                                                     </div>
     </div>
-<div class="popup-widget9" id="popup-widget9">
+<!-- popup-widget8 HTML end -->
+
+<!-- popup-widget9 HTML start -->
+    <div class="popup-widget9" id="popup-widget9">
      <div class="card card-background card-background-mask-primary1 move-on-hover align-items-start">
                                                         <div class="cursor-pointer">
                                                             <div class="full-background" style="background-image: url('{{ url_for('static', filename='img/curved-images/curved8.jpg') }}');  background-size: cover;"
@@ -256,15 +253,18 @@
                                                                     <h5 class="mb-0 text-white">Accept <i class="fas fa-solid fa-cookie-bite"></i> ?</h5>
                                                                 </div>                              <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
                                          <div class="d-flex mt-2">
-                                                                    <button class="btn bg-gradient-primary w-100 px-3 mb-1 active" data-class="bg-transparent">Deny</button>
-                                                                    <button class="btn bg-gradient-secondary w-100 px-3 mb-1 ms-2" data-class="bg-white" >Accept</button>
+                                                                    <button class="btn bg-gradient-primary w-100 px-3 mb-1 active" data-class="bg-transparent" onclick="document.getElementById('popup-widget9').style.display = 'none';">Deny</button>
+                                                                    <button class="btn bg-gradient-secondary w-100 px-3 mb-1 ms-2" data-class="bg-white" onclick="document.getElementById('popup-widget9').style.display = 'none';">Accept</button>
                                                                 </div>
                                                                 
                                                             </div>
                                                         </div>
                                                     </div>
   </div>
-<div class="popup-widget10" id="popup-widget10"> 
+<!-- popup-widget9 HTML end -->
+
+<!-- popup-widget10 HTML start -->
+    <div class="popup-widget10" id="popup-widget10"> 
      <div class="card bg-gradient-faded-dark  move-on-hover align-items-start">
                                                         <div class="cursor-pointer">
                                                             
@@ -273,15 +273,18 @@
                                                                     <h5 class="mb-0 text-white">Accept <i class="fas fa-solid fa-cookie-bite"></i> ?</h5>
                                                                 </div>                              <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
                                          <div class="d-flex mt-2">
-                                                                    <button class="btn bg-gradient-dark w-100 px-3 mb-1 active" data-class="bg-transparent">Deny</button>
-                                                                    <button class="btn bg-gradient-info w-100 px-3 mb-1 ms-2" data-class="bg-white" >Accept</button>
+                                                                    <button class="btn bg-gradient-dark w-100 px-3 mb-1 active" data-class="bg-transparent" onclick="document.getElementById('popup-widget10').style.display = 'none';">Deny</button>
+                                                                    <button class="btn bg-gradient-info w-100 px-3 mb-1 ms-2" data-class="bg-white" onclick="document.getElementById('popup-widget10').style.display = 'none';">Accept</button>
                                                                 </div>
                                                                 
                                                             </div>
                                                         </div>
                                                     </div>
   </div>
-<div class="popup-widget11" id="popup-widget11"> 
+<!-- popup-widget10 HTML end -->
+
+<!-- popup-widget11 HTML start -->
+    <div class="popup-widget11" id="popup-widget11"> 
      <div class="card  card-background bg-gradient-faded-white move-on-hover align-items-start">
                                                         <div class="cursor-pointer">
                                                             <div class="full-background" style="background-image: url('{{ url_for('static', filename='img/curved-images/curved6.jpg') }}');  background-size: cover;"
@@ -291,15 +294,18 @@
                                                                     <h5 class="mb-0 text-white">Accept <i class="fas fa-solid fa-cookie-bite"></i> ?</h5>
                                                                 </div>                              <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
                                          <div class="d-flex mt-2">
-                                                                    <button class="btn bg-gradient-info w-100 px-3 mb-1 active" data-class="bg-transparent">Deny</button>
-                                                                    <button class="btn bg-gradient-warning w-100 px-3 mb-1 ms-2" data-class="bg-white" >Accept</button>
+                                                                    <button class="btn bg-gradient-info w-100 px-3 mb-1 active" data-class="bg-transparent" onclick="document.getElementById('popup-widget11').style.display = 'none';">Deny</button>
+                                                                    <button class="btn bg-gradient-warning w-100 px-3 mb-1 ms-2" data-class="bg-white" onclick="document.getElementById('popup-widget11').style.display = 'none';">Accept</button>
                                                                 </div>
                                                                 
                                                             </div>
                                                         </div>
                                                     </div>
  </div>
-<div class="popup-widget12" id="popup-widget12">
+<!-- popup-widget11 HTML end -->
+
+<!-- popup-widget12 HTML start -->
+    <div class="popup-widget12" id="popup-widget12">
      <div class="card card-background card-background-mask-primary1 bg-gradient-faded-light1 move-on-hover align-items-start">
                                                         <div class="cursor-pointer">
                                                             <div class="full-background" style="background-image: url('{{ url_for('static', filename='img/curved-images/white-curved.jpg') }}');  background-size: cover;"
@@ -309,15 +315,18 @@
                                                                     <h5 class="mb-0 text-white">Accept <i class="fas fa-solid fa-cookie-bite"></i> ?</h5>
                                                                 </div>                              <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
                                          <div class="d-flex mt-2">
-                                                                    <button class="btn bg-gradient-danger w-100 px-3 mb-1 active" data-class="bg-transparent">Deny</button>
-                                                                    <button class="btn bg-gradient-light w-100 px-3 mb-1 ms-2" data-class="bg-white" >Accept</button>
+                                                                    <button class="btn bg-gradient-danger w-100 px-3 mb-1 active" data-class="bg-transparent" onclick="document.getElementById('popup-widget12').style.display = 'none';">Deny</button>
+                                                                    <button class="btn bg-gradient-light w-100 px-3 mb-1 ms-2" data-class="bg-white" onclick="document.getElementById('popup-widget12').style.display = 'none';">Accept</button>
                                                                 </div>
                                                                 
                                                             </div>
                                                         </div>
                                                     </div>
    </div>
-<div class="popup-widget13" id="popup-widget13">
+<!-- popup-widget12 HTML end -->
+
+<!-- popup-widget13 HTML start -->
+    <div class="popup-widget13" id="popup-widget13">
     <div class="card card-background shadow-none card-background-mask-secondary" id="sidenavCard">
                                                         <div class="full-background" style="background-image: url('{{ url_for('static', filename='img/curved-images/white-curved.jpg') }}');  background-size: cover;">
                                                         </div>
@@ -328,12 +337,15 @@
                                                             <div class="docs-info">
                                                                 <h6 class="text-white up mb-0">Accept <i class="fas fa-solid fa-cookie-bite"></i> ?</h6>
                                                                 <p class="text-xs font-weight-bold">We use cookies to offer the best experience to you</p>
-                                                                <a href="" target="_blank" class="btn btn-warning btn-sm w-1001 mb-0">Okay</a>
+                                                                <button class="btn btn-warning btn-sm w-1001 mb-0" onclick="document.getElementById('popup-widget13').style.display = 'none';">Okay</button>
                                                             </div>
                                                         </div>
                                                     </div>
    </div>
-<div class="popup-widget14" id="popup-widget14"> 
+<!-- popup-widget13 HTML end -->
+
+<!-- popup-widget14 HTML start -->
+    <div class="popup-widget14" id="popup-widget14"> 
       <div class="card card-background card-background-mask-primary move-on-hover align-items-start">
                                                         <div class="cursor-pointer">
                                                             <div class="full-background" style="background-image: url('{{ url_for('static', filename='img/curved-images/curved6.jpg') }}')"
@@ -343,15 +355,18 @@
                                                                     <h5 class="mb-0 text-white">Accept <i class="fas fa-solid fa-cookie-bite"></i> ?</h5>
                                                                 </div>                              <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
                                          <div class="d-flex mt-2">
-                                                                    <button class="btn bg-gradient-dark w-100 px-3 mb-1 active" data-class="bg-transparent">Deny</button>
-                                                                    <button class="btn bg-gradient-success w-100 px-3 mb-1 ms-2" data-class="bg-white" >Accept</button>
+                                                                    <button class="btn bg-gradient-dark w-100 px-3 mb-1 active" data-class="bg-transparent" onclick="document.getElementById('popup-widget14').style.display = 'none';">Deny</button>
+                                                                    <button class="btn bg-gradient-success w-100 px-3 mb-1 ms-2" data-class="bg-white" onclick="document.getElementById('popup-widget14').style.display = 'none';">Accept</button>
                                                                 </div>
                                                                 
                                                             </div>
                                                         </div>
                                                     </div>
    </div>
-<div class="popup-widget15" id="popup-widget15">
+<!-- popup-widget14 HTML end -->
+
+<!-- popup-widget15 HTML start -->
+    <div class="popup-widget15" id="popup-widget15">
     <div class="card card-background card-background-mask-primary1   bg-gradient-faded-primary-vertical move-on-hover align-items-start">
                                                         <div class="cursor-pointer">
                                                             <div class="full-background" style="background-image: url('{{ url_for('static', filename='img/curved-images/curved8.jpg') }}')"
@@ -361,15 +376,18 @@
                                                                     <h5 class="mb-0 text-white">Accept <i class="fas fa-solid fa-cookie-bite"></i> ?</h5>
                                                                 </div>                              <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
                                          <div class="d-flex mt-2">
-                                                                    <button class="btn bg-gradient-dark w-100 px-3 mb-1 active" data-class="bg-transparent">Deny</button>
-                                                                    <button class="btn bg-gradient-success w-100 px-3 mb-1 ms-2" data-class="bg-white" >Accept</button>
+                                                                    <button class="btn bg-gradient-dark w-100 px-3 mb-1 active" data-class="bg-transparent" onclick="document.getElementById('popup-widget15').style.display = 'none';">Deny</button>
+                                                                    <button class="btn bg-gradient-success w-100 px-3 mb-1 ms-2" data-class="bg-white" onclick="document.getElementById('popup-widget15').style.display = 'none';">Accept</button>
                                                                 </div>
                                                                 
                                                             </div>
                                                         </div>
                                                     </div>
     </div>
-<div class="popup-widget16" id="popup-widget16"> 
+<!-- popup-widget15 HTML end -->
+
+<!-- popup-widget16 HTML start -->
+    <div class="popup-widget16" id="popup-widget16"> 
       <div class="card card-background card-background-mask-primary  bg-gradient-faded-success-vertical move-on-hover align-items-start">
                                                         <div class="cursor-pointer">
                                                             <div class="full-background" style="background-image: url('{{ url_for('static', filename='img/curved-images/curved14.jpg') }}');  background-size: cover;"
@@ -379,18 +397,19 @@
                                                                     <h5 class="mb-0 text-white">Accept <i class="fas fa-solid fa-cookie-bite"></i> ?</h5>
                                                                 </div>                              <p class="text-white mb-0">We use cookies to offer the best experience to you</p>
                                                                 <div class="d-flex mt-2">
-                                                                    <button class="btn bg-gradient-dark w-100 px-3 mb-1 active" data-class="bg-transparent">Deny</button>
-                                                                    <button class="btn bg-gradient-success w-100 px-3 mb-1 ms-2" data-class="bg-white" >Accept</button>
+                                                                    <button class="btn bg-gradient-dark w-100 px-3 mb-1 active" data-class="bg-transparent" onclick="document.getElementById('popup-widget16').style.display = 'none';">Deny</button>
+                                                                    <button class="btn bg-gradient-success w-100 px-3 mb-1 ms-2" data-class="bg-white" onclick="document.getElementById('popup-widget16').style.display = 'none';">Accept</button>
                                                                 </div>
                                                                 
                                                             </div>
                                                         </div>
                                                     </div>
     </div>
-
+<!-- popup-widget16 HTML end -->
 
 <div class="website-content">
     {{ page_content1 | safe }}
+    
 <div class="popup-widget" id="popup-widget">
                                         <div class="card bg-gradient-dark move-on-hover">
                                                         <div class="card-body">
