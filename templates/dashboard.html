@@ -18,8 +18,58 @@
     <!-- Head -->
     {% include 'head.html'%}
     <!-- End Head -->
-    
-    <body class="g-sidenav-show  bg-gray-100">
+ <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .widget-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .widget-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .widget-item h2 {
+            margin-top: 0;
+        }
+
+        .widget-item .script-tag {
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f8f9fa;
+            color: #333;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .widget-item .copy-btn {
+            background: #007bff;
+            border: none;
+            font-size: 1em;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+        }
+    </style>
+ <body class="g-sidenav-show  bg-gray-100">
         <!-- aside -->  
         {% include 'sidebar.html' %}
         <!-- End aside -->
@@ -28,6 +78,9 @@
             {% include 'navbar.html' %}
             <!-- End Navbar -->
             <div class="container-fluid py-4">
+
+                <h1>Welcome to the Dashboard, {{ current_user.username }}!</h1>
+                
                 <div class="row">
                     <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
                         <div class="card">
@@ -35,9 +88,9 @@
                                 <div class="row">
                                     <div class="col-8">
                                         <div class="numbers">
-                                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Money</p>
+                                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Active Widgets</p>
                                             <h5 class="font-weight-bolder mb-0">
-                                                $53,000
+                                                5
                                                 <span class="text-success text-sm font-weight-bolder">+55%</span>
                                             </h5>
                                         </div>
@@ -57,9 +110,9 @@
                                 <div class="row">
                                     <div class="col-8">
                                         <div class="numbers">
-                                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Users</p>
+                                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Active Package</p>
                                             <h5 class="font-weight-bolder mb-0">
-                                                2,300
+                                                Free
                                                 <span class="text-success text-sm font-weight-bolder">+3%</span>
                                             </h5>
                                         </div>
@@ -79,10 +132,10 @@
                                 <div class="row">
                                     <div class="col-8">
                                         <div class="numbers">
-                                            <p class="text-sm mb-0 text-capitalize font-weight-bold">New Clients</p>
+                                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Trial Days</p>
                                             <h5 class="font-weight-bolder mb-0">
-                                                +3,462
-                                                <span class="text-danger text-sm font-weight-bolder">-2%</span>
+                                                14
+                                                <span class="text-danger text-sm font-weight-bolder">-2 left</span>
                                             </h5>
                                         </div>
                                     </div>
@@ -101,10 +154,10 @@
                                 <div class="row">
                                     <div class="col-8">
                                         <div class="numbers">
-                                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Sales</p>
+                                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Subcription fee</p>
                                             <h5 class="font-weight-bolder mb-0">
-                                                $103,430
-                                                <span class="text-success text-sm font-weight-bolder">+5%</span>
+                                                $0
+                                                <span class="text-success text-sm font-weight-bolder">/month</span>
                                             </h5>
                                         </div>
                                     </div>
@@ -143,7 +196,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                </div>
                         </div>
                     </div>
                     <div class="col-lg-5">
@@ -276,12 +329,64 @@
                             </div>
                         </div>
                     </div>
-                </div>
+          <div class="container">
+            <h1>Widget Dashboard</h1>
+        <ul class="widget-list" id="widget-list">
+            <!-- Widgets will be populated here -->
+        </ul>
+    </div>
+        
+        </div>
             </main>
             
             <!-- Footer -->
             {% include 'footer.html'%}
             <!-- End Footer -->
+            
+ <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const widgetList = document.getElementById('widget-list');
+
+            fetch('/api/widgets')
+                .then(response => response.json())
+                .then(widgets => {
+                    widgets.forEach(widget => {
+                        const listItem = document.createElement('li');
+                        listItem.classList.add('widget-item');
+
+                        const widgetTitle = document.createElement('h2');
+                        widgetTitle.textContent = `Widget: ${widget.id}`;
+                        listItem.appendChild(widgetTitle);
+
+                        const scriptTag = document.createElement('span');
+                        scriptTag.classList.add('script-tag');
+                        scriptTag.textContent = `<script src="${widget.url}"><\/script>`;
+                        listItem.appendChild(scriptTag);
+
+                        const copyButton = document.createElement('button');
+                        copyButton.classList.add('copy-btn');
+                        copyButton.textContent = '📋 Copy';
+                        copyButton.addEventListener('click', function() {
+                            navigator.clipboard.writeText(scriptTag.textContent)
+                                .then(() => {
+                                    alert('Script tag copied to clipboard!');
+                                })
+                                .catch(err => {
+                                    console.error("Failed to copy script tag: ", err);
+                                });
+                        });
+                        listItem.appendChild(copyButton);
+
+                        widgetList.appendChild(listItem);
+                    });
+                })
+                .catch(err => {
+                    console.error("Failed to fetch widgets: ", err);
+                });
+        });
+    </script>
+</body>
+</html>
         </body>
         
     </html>    
